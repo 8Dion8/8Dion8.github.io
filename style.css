@@ -36,6 +36,7 @@ p {
     box-sizing: border-box;
     background-color: black;
     color: white;
+    font-size: large;
 }
 
 #input {
