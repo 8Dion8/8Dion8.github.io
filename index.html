@@ -9,16 +9,16 @@
 </head>
 
 <body>
-    <div id="middle-section">
-        <div>Code:</div>
-        <textarea id="MAWP" cols=40 rows=20></textarea><br>
-        <div>Input:</div>
-        <input type="text" id="input"><br>
-        <button onclick="run_code()">run code</button><br>
+    <div id="middle-section" style="float: left; width: 500;">
+        <div id="label">Code:</div>
+        <textarea id="MAWP"></textarea>
+        <div id="label">Input:</div>
+        <input type="text" id="input">
+        <button onclick="run_code()">run code</button>
         <div id="code-output">Output will appear here.</div>
     </div>
-    <div id="right-section">
-        <div id="stack-debug">The stack will appear here</div>
+    <div id="right-section" style="float: left; width: 200;">
+        <div id="stack-debug">The stack will appear here.</div>
     </div>
 </body>
 

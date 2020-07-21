@@ -2,7 +2,6 @@ body {
     font-family: monospace;
     font-size: 20px;
     background-color: black;
-    text-align: center;
 }
 
 h1,
@@ -11,21 +10,20 @@ p {
     color: white;
 }
 
-.button {
+button {
     background-color: black;
-    color: red;
-    border: 2px solid red;
-    transition-duration: 0.4s;
-}
-
-.button:hover {
-    background-color: red;
-    color: black;
+    width: 80px;
+    color: white;
+    border: red;
+    border-radius: 4px;
+    border-style: double;
+    margin-left: 10px;
+    margin-bottom: 10px;
 }
 
 #MAWP {
     height: 30ch;
-    width: 85ch;
+    width: 778px;
     padding: 5px 10px;
     margin: 8px 0;
     display: inline-block;
@@ -38,21 +36,24 @@ p {
     color: white;
     font-size: large;
     font-family: monospace;
+    display: inline-block;
+    margin-left: 10px;
+    margin-bottom: 10px;
 }
 
 #input {
-    height: 5ch;
-    width: 85ch;
+    height: 30px;
+    width: 778px;
     padding: 5px 10px;
-    margin: 8px 0;
     display: inline-block;
     border: red;
     border-radius: 4px;
     border-style: double;
-    border-radius: 4px;
     box-sizing: border-box;
     background-color: black;
     color: white;
+    margin-left: 10px;
+    margin-bottom: 10px;
 }
 
 #code-output {
@@ -60,10 +61,12 @@ p {
     border: red;
     border-radius: 4px;
     border-style: double;
-    width: 45em;
-    height: 30ch;
+    width: 774px;
+    height: 20ch;
     overflow: scroll;
     text-align: center;
+    margin-left: 10px;
+    margin-bottom: 10px;
 }
 
 #stack-debug {
@@ -75,6 +78,20 @@ p {
     border: red;
     border-radius: 4px;
     border-style: double;
-    width: 30ch;
-    height: 60ch;
+    width: 300px;
+    height: 700px;
+    margin-left: 10px;
+}
+
+#middle-section {
+    align-content: center;
+    border: red;
+    border-radius: 4px;
+    border-style: double;
+    width: 800px;
+    height: 700px;
+}
+
+#label {
+    margin-left: 10px;
 }
