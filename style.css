@@ -65,3 +65,16 @@ p {
     overflow: scroll;
     text-align: center;
 }
+
+#stack-debug {
+    overflow: scroll;
+    text-align: left;
+}
+
+#right-section {
+    border: red;
+    border-radius: 4px;
+    border-style: double;
+    width: 30ch;
+    height: 60ch;
+}
