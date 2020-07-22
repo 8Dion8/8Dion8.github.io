@@ -72,15 +72,17 @@ button {
 #stack-debug {
     overflow: scroll;
     text-align: left;
+    padding: 5px 10px;
 }
 
 #right-section {
     border: red;
     border-radius: 4px;
     border-style: double;
-    width: 300px;
+    width: 262px;
     height: 700px;
     margin-left: 10px;
+    overflow: scroll;
 }
 
 #middle-section {
@@ -89,9 +91,27 @@ button {
     border-radius: 4px;
     border-style: double;
     width: 800px;
+    height: 690px;
+    padding: 5px 10px;
+    overflow: scroll;
+}
+
+#left-section {
+    border: red;
+    border-radius: 4px;
+    border-style: double;
+    width: 262px;
     height: 700px;
+    margin-right: 10px;
+    overflow: scroll;
 }
 
 #label {
     margin-left: 10px;
+}
+
+table,
+th,
+td {
+    border: 1px solid white;
 }

@@ -43,12 +43,19 @@ function buildlongcondbracemap(code) {
     return bracemap
 }
 
+function debug_stack(stack, char, pos) {
+    var current = document.getElementById('stack-debug').innerHTML
+    document.getElementById('stack-debug').innerHTML = current.toString() + "<br>" + char.toString() + " : " + pos.toString() + " : [" + stack.toString() + "]"
+        //console.log(current.toString() + "\n" + stack.toString())
+}
+
 function run_code() {
     var code = document.getElementById('MAWP').value
     const input = document.getElementById('input').value
     document.getElementById('code-output').innerHTML = ''
-    console.log(code)
-    console.log(buildsquarebracemap(code))
+    document.getElementById('stack-debug').innerHTML = 'chr:pos:stack'
+        //console.log(code)
+        //console.log(buildsquarebracemap(code))
     var char = ''
     var pos = 0
     var stack = [1]
@@ -60,9 +67,9 @@ function run_code() {
     const roundbracemap = buildroundbracemap(code)
     const longcondbracemap = buildlongcondbracemap(code)
     while (true) {
-        console.log(pos)
+        //console.log(pos)
         char = code.charAt(pos)
-        console.log(char)
+            //console.log(char)
             //console.log(typeof char)
         if (numbers.includes(char)) {
             stack.push(parseInt(char))
@@ -86,7 +93,7 @@ function run_code() {
             stack.pop()
         } else if (char == '.') {
             document.getElementById('code-output').innerHTML = output
-            console.log(output)
+                //console.log(output)
             return 0
         } else if (char == '!') {
             var temp = stack.pop()
@@ -126,11 +133,14 @@ function run_code() {
             }
         }
         pos += 1
-        console.log(stack)
+            //console.log(stack)
         if (output.length > 2048 * 8) {
             document.getElementById('code-output').innerHTML = output + "\nOutput reached limit of 16kb and was truncated."
             return 0
         }
+
+        debug_stack(stack, char, pos)
+
         if (pos == code.length) {
             return 1
         }
