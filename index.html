@@ -4,11 +4,12 @@
 <head>
     <title>Mawp Interpreter</title>
     <script src="MAWP_logic.js"></script>
+    <script src="custom_link.js"></script>
     <link rel="stylesheet" href="style.css">
     <h1>MAWP interpreter</h1>
 </head>
 
-<body>
+<body onload="load_custom();">
     <div id="left-section" style="float: left; width: 200;">
         <h2>About MAWP</h2>
         <p>MAWP is a stack-based, esoteric programming language written in 2020. Here is the list of current availible commands:</p><br>
@@ -97,12 +98,14 @@
         <textarea id="MAWP"></textarea>
         <div id="label">Input:</div>
         <input type="text" id="input">
-        <button onclick="run_code()">run code</button>
+        <button onclick="run_code()">Run code</button>
+        <button onclick="generate_link();">Generate link</button>
         <div id="code-output">Output will appear here.</div>
     </div>
     <div id="right-section" style="float: left; width: 200;">
         <div id="stack-debug">The stack will appear here.</div>
     </div>
+
 </body>
 
 </html>

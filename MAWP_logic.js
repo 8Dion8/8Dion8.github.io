@@ -50,7 +50,7 @@ function debug_stack(stack, char, pos) {
 }
 
 function run_code() {
-    var code = document.getElementById('MAWP').value
+    const code = document.getElementById('MAWP').value
     const input = document.getElementById('input').value
     document.getElementById('code-output').innerHTML = ''
     document.getElementById('stack-debug').innerHTML = 'chr:pos:stack'
