@@ -18,6 +18,12 @@ button {
     border-style: double;
     margin-left: 10px;
     margin-bottom: 10px;
+    transition-duration: 0.4s;
+}
+
+button:hover {
+    background-color: black;
+    color: red;
 }
 
 #MAWP {
