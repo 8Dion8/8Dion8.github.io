@@ -23,6 +23,16 @@ function generate_link() {
     const input_ = document.getElementById('input').value
     obj = { code: code_, input: input_ }
     query = serialize(obj)
-    link = "8dion8.github.io/?" + query
+    link = "https://8dion8.github.io/?" + query
     document.getElementById('code-output').innerHTML = link
+    return link
+}
+
+function codegolf() {
+    const link = generate_link()
+    const code = document.getElementById('MAWP').value
+    const byte_count = code.length
+    let formatted = "# [MAWP], " + byte_count + " bytes<br>```<br>    " + code + "<br>```<br>[Try it!][mawp_interp]<br><br>[MAWP]: https://esolangs.org/wiki/MAWP<br>[mawp_interp]: " + link
+    document.getElementById('code-output').innerHTML = formatted
+    return formatted
 }
