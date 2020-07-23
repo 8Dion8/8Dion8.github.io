@@ -43,6 +43,21 @@ function buildlongcondbracemap(code) {
     return bracemap
 }
 
+function buildinvlongcondbracemap(code) {
+    temp_bracestack = []
+    bracemap = {}
+    code = code.split("")
+    for (const [position, command] of code.entries()) {
+        if (command === "{") { temp_bracestack.push(position) }
+        if (command === "}") {
+            start = temp_bracestack.pop()
+            bracemap[start] = position
+            bracemap[position] = start
+        }
+    }
+    return bracemap
+}
+
 function debug_stack(stack, char, pos) {
     var current = document.getElementById('stack-debug').innerHTML
     document.getElementById('stack-debug').innerHTML = current.toString() + "<br>" + char.toString() + " : " + pos.toString() + " : [" + stack.toString() + "]"
@@ -66,6 +81,7 @@ function run_code() {
     const squarebracemap = buildsquarebracemap(code)
     const roundbracemap = buildroundbracemap(code)
     const longcondbracemap = buildlongcondbracemap(code)
+    const invlongcondbracemap = buildinvlongcondbracemap(code)
     while (true) {
         //console.log(pos)
         char = code.charAt(pos)
@@ -133,6 +149,10 @@ function run_code() {
             }
         } else if (char == '~') {
             stack = stack.reverse()
+        } else if (char == '{') {
+            if (stack[stack.length - 1] == 0) {
+                pos = invlongcondbracemap[pos]
+            }
         }
         pos += 1
             //console.log(stack)
