@@ -88,7 +88,7 @@ function run_code() {
         } else if (char == 'P') {
             top = stack.pop()
             sec = stack.pop()
-            stack.push(Math.floor(top / sec))
+            stack.push(Math.floor(sec / top))
         } else if (char == '%') {
             stack.pop()
         } else if (char == '.') {
