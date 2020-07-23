@@ -108,23 +108,23 @@ function run_code() {
                 ++pos
             }
         } else if (char == '[') {
-            if (stack[-1] == 0) {
+            if (stack[stack.length - 1] == 0) {
                 pos = squarebracemap[pos]
             }
         } else if (char == ']') {
-            if (stack[-1] != 0) {
+            if (stack[stack.length - 1] != 0) {
                 pos = squarebracemap[pos]
             }
         } else if (char == '(') {
-            if (stack[-1] != 0) {
+            if (stack[stack.length - 1] != 0) {
                 pos = roundbracemap[pos]
             }
         } else if (char == ')') {
-            if (stack[-1] == 0) {
+            if (stack[stack.length - 1] == 0) {
                 pos = roundbracemap[pos]
             }
         } else if (char == '<') {
-            if (stack[-1] != 0) {
+            if (stack[stack.length - 1] != 0) {
                 pos = longcondbracemap[pos]
             }
         } else if (char == '|') {
