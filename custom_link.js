@@ -32,7 +32,14 @@ function codegolf() {
     const link = generate_link()
     const code = document.getElementById('MAWP').value
     const byte_count = code.length
-    let formatted = "# [MAWP], " + byte_count + " bytes<br>```<br>    " + code + "<br>```<br>[Try it!][mawp_interp]<br><br>[MAWP]: https://esolangs.org/wiki/MAWP<br>[mawp_interp]: " + link
+    let formatted = "# [MAWP], " + byte_count + " bytes<br>```<br>" + code + "<br>```<br>[Try it!][mawp_interp]<br><br>[MAWP]: https://esolangs.org/wiki/MAWP<br>[mawp_interp]: " + link
     document.getElementById('code-output').innerHTML = formatted
-    return formatted
+}
+
+function copy_text() {
+    const copyText = document.getElementById('code-output').innerHTML
+    copyText.select();
+    copyText.setSelectionRange(0, 99999);
+    document.execCommand("copy");
+    alert("Copied!");
 }

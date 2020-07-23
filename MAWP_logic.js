@@ -134,8 +134,8 @@ function run_code() {
         }
         pos += 1
             //console.log(stack)
-        if (output.length > 2048 * 8) {
-            document.getElementById('code-output').innerHTML = output + "\nOutput reached limit of 16kb and was truncated."
+        if (output.length > 2048) {
+            document.getElementById('code-output').innerHTML = output + "\nOutput reached limit of 2kb and was truncated."
             return 0
         }
 
