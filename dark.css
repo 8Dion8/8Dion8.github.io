@@ -1,0 +1,160 @@
+body {
+    font-family: monospace;
+    font-size: 20px;
+    background-color: black;
+    transition-duration: 0.4s;
+}
+
+h1,
+div,
+p {
+    color: white;
+    overflow: scroll;
+}
+
+button {
+    background-color: black;
+    color: white;
+    border: red;
+    border-radius: 4px;
+    border-style: double;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    transition-duration: 0.4s;
+}
+
+button:hover {
+    background-color: black;
+    color: red;
+}
+
+#MAWP {
+    height: 30ch;
+    width: 778px;
+    padding: 5px 10px;
+    margin: 8px 0;
+    display: inline-block;
+    border: red;
+    border-radius: 4px;
+    border-style: double;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: black;
+    color: white;
+    font-size: x-large;
+    font-family: monospace;
+    display: inline-block;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    transition-duration: 0.4s;
+}
+
+#input {
+    height: 30px;
+    width: 778px;
+    padding: 5px 10px;
+    display: inline-block;
+    border: red;
+    border-radius: 4px;
+    border-style: double;
+    box-sizing: border-box;
+    background-color: black;
+    color: white;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    transition-duration: 0.4s;
+}
+
+#code-output {
+    display: inline-block;
+    border: red;
+    border-radius: 4px;
+    border-style: double;
+    width: 774px;
+    height: 20ch;
+    overflow: scroll;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+#stack-debug {
+    overflow: scroll;
+    text-align: left;
+    padding: 5px 10px;
+}
+
+#right-section {
+    border: red;
+    border-radius: 4px;
+    border-style: double;
+    width: 262px;
+    height: 700px;
+    margin-left: 10px;
+    overflow: scroll;
+    transition-duration: 0.4s;
+}
+
+#middle-section {
+    align-content: center;
+    border: red;
+    border-radius: 4px;
+    border-style: double;
+    width: 800px;
+    height: 690px;
+    padding: 5px 10px;
+    overflow: scroll;
+    transition-duration: 0.4s;
+}
+
+#left-section {
+    border: red;
+    border-radius: 4px;
+    border-style: double;
+    width: 262px;
+    height: 700px;
+    margin-right: 10px;
+    overflow: scroll;
+    transition-duration: 0.4s;
+}
+
+#label {
+    margin-left: 10px;
+}
+
+table,
+th,
+td {
+    border: 1px solid white;
+}
+
+#reference {
+    display: inline-block;
+    border: red;
+    border-radius: 4px;
+    border-style: double;
+    width: 774px;
+    height: 2ch;
+    overflow: scroll;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+#reference-input {
+    height: 30px;
+    width: 778px;
+    padding: 5px 10px;
+    display: inline-block;
+    border: red;
+    border-radius: 4px;
+    border-style: double;
+    box-sizing: border-box;
+    background-color: black;
+    color: white;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    transition-duration: 0.4s;
+}
+
+#switch {
+    margin-left: 66px;
+}
