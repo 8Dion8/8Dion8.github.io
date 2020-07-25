@@ -83,9 +83,9 @@ function run_code() {
     const longcondbracemap = buildlongcondbracemap(code)
     const invlongcondbracemap = buildinvlongcondbracemap(code)
     while (true) {
-        //console.log(pos)
+        console.log(pos)
         char = code.charAt(pos)
-            //console.log(char)
+        console.log(char)
             //console.log(typeof char)
         if (numbers.includes(char)) {
             stack.push(parseInt(char))
@@ -155,7 +155,7 @@ function run_code() {
             }
         }
         pos += 1
-            //console.log(stack)
+        console.log(stack)
         if (output.length > 2048) {
             document.getElementById('code-output').innerHTML = output + "\nOutput reached limit of 2kb and was truncated."
             return 0
@@ -168,4 +168,3 @@ function run_code() {
         }
     }
 }
-//https://8dion8.github.io/?code=%5B!!3P3WA%3C75W2W%3B73W5W%3B65W2W1M2W%3B65W2W1M2W%3B%3E%25!!5P5WA%3C92M6W%3B94M9W%3B65W2W1M2W%3B65W2W1M2W%3B%3E%25!55WA%3F.%251M25W%3B%5D&input=%23Fizz%2075W2W%3B73W5W%3B65W2W1M2W%3B65W2W1M2W%3B%20%23Buzz%2092M6W%3B94M9W%3B65W2W1M2W%3B65W2W1M2W%3B

@@ -5,6 +5,7 @@
     <title>Mawp Interpreter</title>
     <script src="MAWP_logic.js"></script>
     <script src="custom_link.js"></script>
+    <script src="reference.js"></script>
     <link rel="stylesheet" href="style.css">
     <h1>MAWP interpreter</h1>
 </head>
@@ -115,7 +116,10 @@
         <button onclick="generate_link();">Generate link</button>
         <button onclick="codegolf();">Generate Codegolf submission</button>
         <button onclick="copy_text();">Copy output</button>
-        <pre id="code-output">Output will appear here.</pre>
+        <pre id="code-output">Output will appear here.</pre><br>
+        <h3>Char to ASCII reference:</h3>
+        <input id="reference-input" type="text" oninput="generate_reference()">
+        <div id="reference"></div>
     </div>
     <div id="right-section" style="float: left; width: 200;">
         <div id="stack-debug">The stack will appear here.</div>

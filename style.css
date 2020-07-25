@@ -8,6 +8,7 @@ h1,
 div,
 p {
     color: white;
+    overflow: scroll;
 }
 
 button {
@@ -118,4 +119,31 @@ table,
 th,
 td {
     border: 1px solid white;
+}
+
+#reference {
+    display: inline-block;
+    border: red;
+    border-radius: 4px;
+    border-style: double;
+    width: 774px;
+    height: 2ch;
+    overflow: scroll;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+#reference-input {
+    height: 30px;
+    width: 778px;
+    padding: 5px 10px;
+    display: inline-block;
+    border: red;
+    border-radius: 4px;
+    border-style: double;
+    box-sizing: border-box;
+    background-color: black;
+    color: white;
+    margin-left: 10px;
+    margin-bottom: 10px;
 }
