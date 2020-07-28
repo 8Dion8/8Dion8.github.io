@@ -37,9 +37,9 @@ function codegolf() {
 }
 
 function copy_text() {
-    const copyText = document.getElementById('code-output').innerHTML
+    var copyText = document.getElementById('code-output').innerHTML
+    console.log(copyText)
     copyText.select();
-    copyText.setSelectionRange(0, 99999);
     document.execCommand("copy");
     alert("Copied!");
 }

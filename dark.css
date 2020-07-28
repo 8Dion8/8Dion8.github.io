@@ -14,6 +14,7 @@ p {
 
 button {
     background-color: black;
+    font-family: monospace;
     color: white;
     border: red;
     border-radius: 4px;
@@ -29,7 +30,7 @@ button:hover {
 }
 
 #MAWP {
-    height: 30ch;
+    height: 20ch;
     width: 778px;
     padding: 5px 10px;
     margin: 8px 0;
@@ -71,7 +72,7 @@ button:hover {
     border-radius: 4px;
     border-style: double;
     width: 774px;
-    height: 20ch;
+    height: auto;
     overflow: scroll;
     margin-left: 10px;
     margin-bottom: 10px;
@@ -88,7 +89,7 @@ button:hover {
     border-radius: 4px;
     border-style: double;
     width: 262px;
-    height: 700px;
+    height: 770px;
     margin-left: 10px;
     overflow: scroll;
     transition-duration: 0.4s;
@@ -100,7 +101,7 @@ button:hover {
     border-radius: 4px;
     border-style: double;
     width: 800px;
-    height: 690px;
+    height: 760px;
     padding: 5px 10px;
     overflow: scroll;
     transition-duration: 0.4s;
@@ -111,7 +112,7 @@ button:hover {
     border-radius: 4px;
     border-style: double;
     width: 262px;
-    height: 700px;
+    height: 770px;
     margin-right: 10px;
     overflow: scroll;
     transition-duration: 0.4s;
@@ -156,5 +157,5 @@ td {
 }
 
 #switch {
-    margin-left: 66px;
+    margin-left: 0px;
 }
