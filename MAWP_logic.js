@@ -153,6 +153,14 @@ function run_code() {
             if (stack[stack.length - 1] == 0) {
                 pos = invlongcondbracemap[pos]
             }
+        } else if (char == '@') {
+            for (let i = 0; i < input.length; ++i) {
+                if (!isNaN(input[i])) {
+                    stack.push(input[i])
+                } else {
+                    stack.push(0)
+                }
+            }
         }
         pos += 1
         console.log(stack)
