@@ -131,7 +131,7 @@ button:hover {
     transition-duration: 0.4s;
 }
 
-#label {
+.label {
     margin-left: 10px;
     margin-right: 10px;
 }
