@@ -9,7 +9,6 @@ h1,
 div,
 p {
     color: white;
-    overflow: scroll;
 }
 
 button {
@@ -20,6 +19,7 @@ button {
     border-radius: 4px;
     border-style: double;
     margin-left: 10px;
+    margin-right: 10px;
     margin-bottom: 10px;
     transition-duration: 0.4s;
 }
@@ -29,9 +29,20 @@ button:hover {
     color: red;
 }
 
+#left-section::-webkit-scrollbar,
+#right-section::-webkit-scrollbar,
+#middle-section::-webkit-scrollbar,
+#MAWP::-webkit-scrollbar,
+#input::-webkit-scrollbar,
+#code-output::-webkit-scrollbar,
+#reference::-webkit-scrollbar,
+#reference-output::-webkit-scrollbar {
+    display: none;
+}
+
 #MAWP {
     height: 20ch;
-    width: 778px;
+    width: 98%;
     padding: 5px 10px;
     margin: 8px 0;
     display: inline-block;
@@ -46,13 +57,14 @@ button:hover {
     font-family: monospace;
     display: inline-block;
     margin-left: 10px;
+    margin-right: 10px;
     margin-bottom: 10px;
     transition-duration: 0.4s;
 }
 
 #input {
     height: 30px;
-    width: 778px;
+    width: 98%;
     padding: 5px 10px;
     display: inline-block;
     border: red;
@@ -62,6 +74,7 @@ button:hover {
     background-color: black;
     color: white;
     margin-left: 10px;
+    margin-right: 10px;
     margin-bottom: 10px;
     transition-duration: 0.4s;
 }
@@ -71,15 +84,14 @@ button:hover {
     border: red;
     border-radius: 4px;
     border-style: double;
-    width: 774px;
+    width: 98%;
     height: auto;
-    overflow: scroll;
     margin-left: 10px;
+    margin-right: 10px;
     margin-bottom: 10px;
 }
 
 #stack-debug {
-    overflow: scroll;
     text-align: left;
     padding: 5px 10px;
 }
@@ -88,9 +100,10 @@ button:hover {
     border: red;
     border-radius: 4px;
     border-style: double;
-    width: 262px;
-    height: 770px;
+    width: 20vw;
+    height: 50vw;
     margin-left: 10px;
+    margin-right: 10px;
     overflow: scroll;
     transition-duration: 0.4s;
 }
@@ -100,8 +113,8 @@ button:hover {
     border: red;
     border-radius: 4px;
     border-style: double;
-    width: 800px;
-    height: 760px;
+    width: 56vw;
+    height: 50vw;
     padding: 5px 10px;
     overflow: scroll;
     transition-duration: 0.4s;
@@ -111,15 +124,16 @@ button:hover {
     border: red;
     border-radius: 4px;
     border-style: double;
-    width: 262px;
-    height: 770px;
+    width: 20vw;
+    height: 50vw;
     margin-right: 10px;
-    overflow: scroll;
+    overflow-y: scroll;
     transition-duration: 0.4s;
 }
 
 #label {
     margin-left: 10px;
+    margin-right: 10px;
 }
 
 table,
@@ -133,16 +147,17 @@ td {
     border: red;
     border-radius: 4px;
     border-style: double;
-    width: 774px;
+    width: 98%;
     height: 2ch;
-    overflow: scroll;
+    overflow: hidden;
     margin-left: 10px;
+    margin-right: 10px;
     margin-bottom: 10px;
 }
 
 #reference-input {
     height: 30px;
-    width: 778px;
+    width: 98%;
     padding: 5px 10px;
     display: inline-block;
     border: red;
@@ -152,6 +167,7 @@ td {
     background-color: black;
     color: white;
     margin-left: 10px;
+    margin-right: 10px;
     margin-bottom: 10px;
     transition-duration: 0.4s;
 }
