@@ -53,7 +53,7 @@ button:hover {
     box-sizing: border-box;
     background-color: white;
     color: black;
-    font-size: x-large;
+    font-size: 1.5vw;
     font-family: monospace;
     display: inline-block;
     margin-left: 10px;

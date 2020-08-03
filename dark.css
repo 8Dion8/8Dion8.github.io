@@ -49,11 +49,10 @@ button:hover {
     border: red;
     border-radius: 4px;
     border-style: double;
-    border-radius: 4px;
     box-sizing: border-box;
     background-color: black;
     color: white;
-    font-size: x-large;
+    font-size: 1.5vw;
     font-family: monospace;
     display: inline-block;
     margin-left: 10px;
