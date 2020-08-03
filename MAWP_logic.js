@@ -65,6 +65,7 @@ function debug_stack(stack, char, pos) {
 }
 
 function run_code() {
+    var t0 = performance.now()
     const code = document.getElementById('MAWP').value
     const input = document.getElementById('input').value
     document.getElementById('code-output').innerHTML = ''
@@ -112,7 +113,8 @@ function run_code() {
             stack.pop()
         } else if (char == '.') {
             document.getElementById('code-output').innerHTML = output
-                //
+            var t1 = performance.now()
+            document.getElementById('code-time').innerHTML = ((t1 - t0) / 1000).toFixed(3) + " seconds elapsed"
             return 0
         } else if (char == '!') {
             var temp = stack.pop()
@@ -169,6 +171,8 @@ function run_code() {
 
         if (output.length > 2048) {
             document.getElementById('code-output').innerHTML = output + "\nOutput reached limit of 2kb and was truncated."
+            var t1 = performance.now()
+            document.getElementById('code-time').innerHTML = ((t1 - t0) / 1000).toFixed(3) + " seconds elapsed"
             return 0
         }
 
@@ -176,6 +180,8 @@ function run_code() {
         console.log('stack: ', stack)
 
         if (pos == code.length) {
+            var t1 = performance.now()
+            document.getElementById('code-time').innerHTML = ((t1 - t0) / 1000).toFixed(3) + " seconds elapsed"
             return 1
         }
     }

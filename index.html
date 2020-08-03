@@ -13,7 +13,7 @@
     <link rel="icon" href="logo.ico">
 
     <button id="switch" onclick="control_theme()">Switch theme</button><br>
-    <div>ver 0.43</div>
+    <div>ver 0.44</div>
 </head>
 
 <body onload="load_custom();">
@@ -127,6 +127,7 @@
         <button onclick="copy_text();">Copy output</button>
         <button onclick="remove_whitespace();">Remove whitespace</button>
         <pre id="code-output">Output will appear here.</pre><br>
+        <div id="code-time">Time of code executing will appear here</div>
         <h3>Char to ASCII reference:</h3>
         <input id="reference-input" type="text" oninput="generate_reference()">
         <div id="reference"></div>
