@@ -85,6 +85,9 @@ function run_code() {
     while (true) {
 
         char = code.charAt(pos)
+        console.log('pos: ', pos);
+        console.log('char: ', char);
+        console.log(typeof char)
 
         //
         if (numbers.includes(char)) {
@@ -156,7 +159,7 @@ function run_code() {
         } else if (char == '@') {
             for (let i = 0; i < input.length; ++i) {
                 if (!isNaN(input[i])) {
-                    stack.push(input[i])
+                    stack.push(parseInt(input[i]))
                 } else {
                     stack.push(0)
                 }
@@ -170,6 +173,7 @@ function run_code() {
         }
 
         debug_stack(stack, char, pos)
+        console.log('stack: ', stack);
 
         if (pos == code.length) {
             return 1
