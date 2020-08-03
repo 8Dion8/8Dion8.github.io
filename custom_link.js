@@ -45,3 +45,8 @@ function copy_text() {
     window.getSelection().removeAllRanges();
     alert("Copied!");
 }
+
+function remove_whitespace() {
+    var code = document.getElementById('MAWP').value
+    document.getElementById('MAWP').value = code.replace(/\s/g, '')
+}

@@ -86,6 +86,7 @@ button:hover {
     border-style: double;
     width: 98%;
     height: auto;
+    overflow-y: scroll;
     margin-left: 10px;
     margin-right: 10px;
     margin-bottom: 10px;

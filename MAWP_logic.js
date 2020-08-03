@@ -173,7 +173,7 @@ function run_code() {
         }
 
         debug_stack(stack, char, pos)
-        console.log('stack: ', stack);
+        console.log('stack: ', stack)
 
         if (pos == code.length) {
             return 1
