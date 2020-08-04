@@ -50,3 +50,10 @@ function remove_whitespace() {
     var code = document.getElementById('MAWP').value
     document.getElementById('MAWP').value = code.replace(/\s/g, '')
 }
+
+function update_bytecount() {
+    const code = document.getElementById('MAWP').value
+    const code_length = code.length
+    console.log('code_length: ', code_length);
+    document.getElementById("bytecount").innerHTML = "Code: " + code_length + " chars"
+}

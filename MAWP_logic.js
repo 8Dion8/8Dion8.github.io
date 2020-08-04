@@ -61,7 +61,6 @@ function buildinvlongcondbracemap(code) {
 function debug_stack(stack, char, pos) {
     var current = document.getElementById('stack-debug').innerHTML
     document.getElementById('stack-debug').innerHTML = current.toString() + "<br>" + char.toString() + " : " + pos.toString() + " : [" + stack.toString() + "]"
-        //
 }
 
 function run_code() {
@@ -86,11 +85,6 @@ function run_code() {
     while (true) {
 
         char = code.charAt(pos)
-
-
-
-
-        //
         if (numbers.includes(char)) {
             stack.push(parseInt(char))
         } else if (char == 'M') {

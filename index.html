@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mawp Interpreter</title>
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap" rel="stylesheet">
-    <script src="MAWP_logic.js"></script>
+    <script src="new_logic.js"></script>
     <script src="custom_link.js"></script>
     <script src="reference.js"></script>
     <script src="theme_switch.js"></script>
@@ -13,10 +13,10 @@
     <link rel="icon" href="logo.ico">
 
     <button id="switch" onclick="control_theme()">Switch theme</button><br>
-    <div>ver 0.46</div>
+    <div>ver 0.47</div>
 </head>
 
-<body onload="load_custom();">
+<body onload="load_custom();update_bytecount();">
     <div id="left-section" style="float: left; width: 200;">
         <img src="logo.ico">
         <p>MAWP is a stack-based, esoteric programming language written in 2020. Here is the list of current availible commands:</p><br>
@@ -117,11 +117,11 @@
         </table>
     </div>
     <div id="middle-section" style="float: left; width: 500;">
-        <div class="label">Code:</div>
-        <textarea id="MAWP"></textarea>
+        <div class="label" id="bytecount">Code: 0 chars</div>
+        <textarea id="MAWP" oninput="update_bytecount();"></textarea>
         <div class="label">Input:</div>
         <input type="text" id="input">
-        <button onclick="setTimeout(run_code,0)">Run code</button>
+        <button onclick="setTimeout(debug_code,0)">Run code</button>
         <button onclick="generate_link();">Generate link</button>
         <button onclick="codegolf();">Generate Codegolf submission</button>
         <button onclick="copy_text();">Copy output</button>
