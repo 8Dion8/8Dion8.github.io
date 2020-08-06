@@ -161,6 +161,9 @@ function debug_code() {
                     }
                 }
                 break;
+            case '_':
+                stack.push(stack.length)
+                break;
         }
         pos += 1
 
