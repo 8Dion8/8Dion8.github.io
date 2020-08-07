@@ -154,7 +154,9 @@ function debug_code() {
                 break;
             case '@':
                 for (let i = 0; i < input.length; ++i) {
-                    if (!isNaN(input[i])) {
+                    if (input[i] == ' ') {
+                        stack.push(0)
+                    } else if (!isNaN(input[i])) {
                         stack.push(parseInt(input[i]))
                     } else {
                         stack.push(0)
