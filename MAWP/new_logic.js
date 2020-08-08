@@ -170,6 +170,7 @@ function debug_code() {
         pos += 1
 
         if (output.length > 2048) {
+            document.getElementById('code-output').innerHTML = output
             document.getElementById('code-output').innerHTML = output + "\nOutput reached limit of 2kb and was truncated."
             var t1 = performance.now()
             document.getElementById('code-time').innerHTML = ((t1 - t0) / 1000).toFixed(3) + " seconds elapsed";
@@ -183,6 +184,7 @@ function debug_code() {
 
 
         if (pos == code.length) {
+            document.getElementById('code-output').innerHTML = output
             var t1 = performance.now()
             document.getElementById('code-time').innerHTML = ((t1 - t0) / 1000).toFixed(3) + " seconds elapsed";
             return 1
