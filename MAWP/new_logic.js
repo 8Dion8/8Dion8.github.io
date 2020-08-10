@@ -32,7 +32,6 @@ function debug_code() {
     var stack = [1]
     var top
     var sec
-    var numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
     var output = ''
     const squarebracemap = buildbracemap(code, "[", "]")
     const roundbracemap = buildbracemap(code, "(", ")")
