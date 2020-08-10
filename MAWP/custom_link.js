@@ -19,7 +19,7 @@ serialize = function(obj) {
 }
 
 function generate_link() {
-    const code_ = document.getElementById('MAWP').innerHTML
+    const code_ = document.getElementById('MAWP').innerHTML;
     const input_ = document.getElementById('input').innerHTML
     obj = { code: code_, input: input_ }
     query = serialize(obj)
