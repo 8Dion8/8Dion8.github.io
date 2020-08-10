@@ -5,7 +5,7 @@ function load_custom() {
     const code = urlParams.get('code')
     const input = urlParams.get('input')
         //console.log(code, input);
-    document.getElementById('MAWP').value = code
+    document.getElementById('MAWP').innerHTML = code
     document.getElementById('input').innerHTML = input
 }
 
@@ -47,8 +47,8 @@ function copy_text() {
 }
 
 function remove_whitespace() {
-    var code = document.getElementById('MAWP').value
-    document.getElementById('MAWP').value = code.replace(/\s/g, '')
+    var code = document.getElementById('MAWP').innerHTML
+    document.getElementById('MAWP').innerHTML = code.replace(/\s/g, '')
 }
 
 function update_bytecount() {
