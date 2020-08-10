@@ -6,7 +6,7 @@ function load_custom() {
     const input = urlParams.get('input')
         //console.log(code, input);
     document.getElementById('MAWP').value = code
-    document.getElementById('input').value = input
+    document.getElementById('input').innerHTML = input
 }
 
 serialize = function(obj) {
@@ -19,8 +19,8 @@ serialize = function(obj) {
 }
 
 function generate_link() {
-    const code_ = document.getElementById('MAWP').value
-    const input_ = document.getElementById('input').value
+    const code_ = document.getElementById('MAWP').innerHTML
+    const input_ = document.getElementById('input').innerHTML
     obj = { code: code_, input: input_ }
     query = serialize(obj)
     link = "https://8dion8.github.io/MAWP/?" + query
@@ -52,7 +52,7 @@ function remove_whitespace() {
 }
 
 function update_bytecount() {
-    const code = document.getElementById('MAWP').value
+    const code = document.getElementById('MAWP').innerHTML
     const code_length = code.length
     console.log('code_length: ', code_length);
     document.getElementById("bytecount").innerHTML = "Code: " + code_length + " chars"

@@ -41,7 +41,7 @@ button:hover {
 }
 
 #MAWP {
-    height: 20ch;
+    min-height: 10ch;
     width: 98%;
     padding: 5px 10px;
     margin: 8px 0;
@@ -63,7 +63,7 @@ button:hover {
 }
 
 #input {
-    height: 30px;
+    min-height: 60px;
     width: 98%;
     padding: 5px 10px;
     display: inline-block;
