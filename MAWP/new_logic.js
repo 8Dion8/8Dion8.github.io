@@ -20,9 +20,15 @@ function debug_stack(stack, char, pos) {
 
 function debug_code() {
     var t0 = performance.now()
-    const code = document.getElementById('MAWP').value
+    var code = document.getElementById('MAWP').innerHTML
+    code = code.replace("<br>", "")
+    console.log(code)
     if (code == "") { return }
-    const input = document.getElementById('input').value
+    const input_string = document.getElementById('input').innerHTML
+    var input = input_string.split("\n")
+    input.pop()
+    input = input.reverse()
+    console.log(input)
     document.getElementById('code-output').innerHTML = ''
     document.getElementById('stack-debug').innerHTML = 'chr:pos:stack'
         //
@@ -140,8 +146,13 @@ function debug_code() {
                 }
                 break;
             case '|':
-                for (let i = 0; i < input.length; ++i) {
-                    stack.push(input[i].charCodeAt(0))
+                top = input.pop()
+                if (top == undefined) {
+                    stack.push(0)
+                } else {
+                    for (let i = 0; i < top.length; ++i) {
+                        stack.push(top[i].charCodeAt(0))
+                    }
                 }
                 break;
             case '~':
@@ -153,18 +164,29 @@ function debug_code() {
                 }
                 break;
             case '@':
-                for (let i = 0; i < input.length; ++i) {
-                    if (input[i] == ' ') {
-                        stack.push(0)
-                    } else if (!isNaN(input[i])) {
-                        stack.push(parseInt(input[i]))
-                    } else {
-                        stack.push(0)
+                sec = input.pop()
+                if (sec == undefined) { stack.push(0) } else {
+                    for (let i = 0; i < sec.length; ++i) {
+                        if (sec[i] == ' ') {
+                            stack.push(0)
+                        } else if (!isNaN(sec[i])) {
+                            stack.push(parseInt(sec[i]))
+                        } else {
+                            stack.push(0)
+                        }
                     }
                 }
                 break;
             case '_':
                 stack.push(stack.length)
+                break;
+            case '/':
+                top = stack.pop()
+                stack.unshift(top)
+                break;
+            case '\\':
+                sec = stack.shift()
+                stack.push(sec)
                 break;
         }
         pos += 1
