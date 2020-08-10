@@ -52,7 +52,8 @@ function remove_whitespace() {
 }
 
 function update_bytecount() {
-    const code = document.getElementById('MAWP').innerHTML
+    var code = document.getElementById('MAWP').innerHTML
+    code = code.replace('<br', ' ')
     const code_length = code.length
     console.log('code_length: ', code_length);
     document.getElementById("bytecount").innerHTML = "Code: " + code_length + " chars"
