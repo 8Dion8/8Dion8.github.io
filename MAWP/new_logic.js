@@ -21,6 +21,7 @@ function debug_stack(stack, char, pos) {
 function debug_code() {
     var t0 = performance.now()
     const code = document.getElementById('MAWP').value
+    if (code == "") { return }
     const input = document.getElementById('input').value
     document.getElementById('code-output').innerHTML = ''
     document.getElementById('stack-debug').innerHTML = 'chr:pos:stack'
