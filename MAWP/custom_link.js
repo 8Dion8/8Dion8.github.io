@@ -31,6 +31,7 @@ function generate_link() {
 function codegolf() {
     const link = generate_link()
     const code = document.getElementById('MAWP').innerHTML
+    console.log(code)
     const byte_count = code.length
     let formatted = "# [MAWP], " + byte_count + " bytes<br>```<br>" + code + "<br>```<br>[Try it!][mawp_interp]<br><br>[MAWP]: https://esolangs.org/wiki/MAWP<br>[mawp_interp]: " + link
     document.getElementById('code-output').innerHTML = formatted
