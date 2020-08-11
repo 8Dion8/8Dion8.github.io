@@ -19,7 +19,8 @@ serialize = function(obj) {
 }
 
 function generate_link() {
-    const code_ = document.getElementById('MAWP').innerHTML;
+    var code_ = document.getElementById('MAWP').innerHTML;
+    code_ = code_.replace(/<br>/g, '')
     const input_ = document.getElementById('input').innerHTML
     obj = { code: code_, input: input_ }
     query = serialize(obj)
@@ -30,7 +31,8 @@ function generate_link() {
 
 function codegolf() {
     const link = generate_link()
-    const code = document.getElementById('MAWP').innerHTML
+    var code = document.getElementById('MAWP').innerHTML
+    code = code.replace(/<br>/g, '')
     console.log(code)
     const byte_count = code.length
     let formatted = "# [MAWP], " + byte_count + " bytes<br>```<br>" + code + "<br>```<br>[Try it!][mawp_interp]<br><br>[MAWP]: https://esolangs.org/wiki/MAWP<br>[mawp_interp]: " + link
