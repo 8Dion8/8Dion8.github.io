@@ -84,7 +84,7 @@ button:hover {
     border-radius: 4px;
     border-style: double;
     width: 98%;
-    height: auto;
+    min-height: 2ch;
     overflow-y: scroll;
     margin-left: 10px;
     margin-right: 10px;
