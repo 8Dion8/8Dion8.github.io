@@ -21,6 +21,8 @@ serialize = function(obj) {
 function generate_link() {
     var code_ = document.getElementById('MAWP').innerHTML;
     code_ = code_.replace(/<br>/g, '')
+    code_ = code_.replace('&lt;', '<')
+    code_ = code_.replace('&gt;', '>')
     const input_ = document.getElementById('input').innerHTML
     obj = { code: code_, input: input_ }
     query = serialize(obj)
@@ -58,6 +60,8 @@ function update_bytecount() {
     var code = document.getElementById('MAWP').innerHTML
     console.log("Code before formatting:" + code)
     code = code.replace(/<br>/g, '')
+    code = code.replace('&lt;', '<')
+    code = code.replace('&gt;', '>')
     console.log("Code after formatting:" + code)
     const code_length = code.length
     console.log('code_length: ', code_length);
