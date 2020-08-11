@@ -1,21 +1,21 @@
 body {
     font-family: monospace;
     font-size: 1.2vw;
-    background-color: black;
+    background-color: #130303;
     transition-duration: 0.4s;
 }
 
 h1,
 div,
 p {
-    color: white;
+    color: #E6E6E9;
 }
 
 button {
-    background-color: black;
+    background-color: #130303;
     font-family: monospace;
-    color: white;
-    border: red;
+    color: #E6E6E9;
+    border: #E23D28;
     border-radius: 4px;
     border-style: double;
     margin-left: 10px;
@@ -25,8 +25,8 @@ button {
 }
 
 button:hover {
-    background-color: black;
-    color: red;
+    background-color: #130303;
+    color: #E23D28;
 }
 
 #left-section::-webkit-scrollbar,
@@ -41,17 +41,17 @@ button:hover {
 }
 
 #MAWP {
-    height: 20ch;
+    min-height: 10ch;
     width: 98%;
     padding: 5px 10px;
     margin: 8px 0;
     display: inline-block;
-    border: red;
+    border: #E23D28;
     border-radius: 4px;
     border-style: double;
     box-sizing: border-box;
-    background-color: black;
-    color: white;
+    background-color: #130303;
+    color: #E6E6E9;
     font-size: 1.5vw;
     font-family: monospace;
     display: inline-block;
@@ -62,16 +62,16 @@ button:hover {
 }
 
 #input {
-    height: 30px;
+    min-height: 60px;
     width: 98%;
     padding: 5px 10px;
     display: inline-block;
-    border: red;
+    border: #E23D28;
     border-radius: 4px;
     border-style: double;
     box-sizing: border-box;
-    background-color: black;
-    color: white;
+    background-color: #130303;
+    color: #E6E6E9;
     margin-left: 10px;
     margin-right: 10px;
     margin-bottom: 10px;
@@ -80,7 +80,7 @@ button:hover {
 
 #code-output {
     display: inline-block;
-    border: red;
+    border: #E23D28;
     border-radius: 4px;
     border-style: double;
     width: 98%;
@@ -97,7 +97,7 @@ button:hover {
 }
 
 #right-section {
-    border: red;
+    border: #E23D28;
     border-radius: 4px;
     border-style: double;
     width: 20vw;
@@ -109,7 +109,7 @@ button:hover {
 
 #middle-section {
     align-content: center;
-    border: red;
+    border: #E23D28;
     border-radius: 4px;
     border-style: double;
     width: 55vw;
@@ -120,7 +120,7 @@ button:hover {
 }
 
 #left-section {
-    border: red;
+    border: #E23D28;
     border-radius: 4px;
     border-style: double;
     width: 20vw;
@@ -138,12 +138,12 @@ button:hover {
 table,
 th,
 td {
-    border: 1px solid white;
+    border: 1px solid #E6E6E9;
 }
 
 #reference {
     display: inline-block;
-    border: red;
+    border: #E23D28;
     border-radius: 4px;
     border-style: double;
     width: 98%;
@@ -159,12 +159,12 @@ td {
     width: 98%;
     padding: 5px 10px;
     display: inline-block;
-    border: red;
+    border: #E23D28;
     border-radius: 4px;
     border-style: double;
     box-sizing: border-box;
-    background-color: black;
-    color: white;
+    background-color: #130303;
+    color: #E6E6E9;
     margin-left: 10px;
     margin-right: 10px;
     margin-bottom: 10px;

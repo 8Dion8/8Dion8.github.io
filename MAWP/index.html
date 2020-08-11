@@ -15,7 +15,7 @@
     <link rel="icon" href="logo.ico">
 
     <button id="switch" onclick="control_theme()">Switch theme</button><br>
-    <div>ver 1.0</div>
+    <div>ver 1.1</div>
 </head>
 
 <body onload="load_custom();update_bytecount();">
@@ -81,8 +81,8 @@
             </tr>
             <tr>
                 <td>
-                    <</td>
-                        <td>Long conditional. If top of stack doesn't equal to 0, jumps to its ></td>
+                    &lt;</td>
+                <td>Long conditional. If top of stack doesn't equal to 0, jumps to its ></td>
             </tr>
             <tr>
                 <td>></td>
@@ -116,13 +116,21 @@
                 <td>@</td>
                 <td>Pushes whole input byte by byte. If character is an integer, then push that integer. Else push a 0</td>
             </tr>
+            <tr>
+                <td>/</td>
+                <td>Cycles stack clockwise</td>
+            </tr>
+            <tr>
+                <td>\</td>
+                <td>Cycles stack anticlockwise</td>
+            </tr>
         </table>
     </div>
     <div id="middle-section" style="float: left; width: 500;">
         <div class="label" id="bytecount">Code: 0 chars</div>
-        <textarea id="MAWP" oninput="update_bytecount();"></textarea>
+        <span id="MAWP" oninput="update_bytecount();" contenteditable=""></span>
         <div class="label">Input:</div>
-        <input type="text" id="input">
+        <pre id="input" contenteditable></pre>
         <button onclick="setTimeout(debug_code,0)">Run code</button>
         <button onclick="generate_link();">Generate link</button>
         <button onclick="codegolf();">Generate Codegolf submission</button>
@@ -133,6 +141,25 @@
         <h3>Char to ASCII reference:</h3>
         <input id="reference-input" type="text" oninput="generate_reference()">
         <div id="reference"></div>
+        <h3 class="label">Latest added features:</h3>
+        <table>
+            <tr>
+                <td>Target</td>
+                <td>Description</td>
+            </tr>
+            <tr>
+                <td>/</td>
+                <td>Cycles stack clockwise</td>
+            </tr>
+            <tr>
+                <td>\</td>
+                <td>Cycles stack anticlockwise</td>
+            </tr>
+            <tr>
+                <td>Input</td>
+                <td>Now supports multiline input. Each stack will take in one line each call, and will push a 0 if there are no lines left</td>
+            </tr>
+        </table>
     </div>
     <div id="right-section" style="float: left; width: 200;">
         <div id="stack-debug">The stack will appear here.</div>
