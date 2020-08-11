@@ -14,8 +14,10 @@ function buildbracemap(code, char1, char2) {
 }
 
 function debug_stack(stack, char, pos) {
-    var current = document.getElementById('stack-debug').innerHTML
-    document.getElementById('stack-debug').innerHTML = current.toString() + "<br>" + char.toString() + " : " + pos.toString() + " : [" + stack.toString() + "]"
+    if("1234567890MAWP%.!:;?[]()<>|~{}@_/\\".includes(char)){
+        var current = document.getElementById('stack-debug').innerHTML
+        document.getElementById('stack-debug').innerHTML = current.toString() + "<br>" + char.toString() + " : " + pos.toString() + " : [" + stack.toString() + "]"
+    }
 }
 
 function debug_code() {
