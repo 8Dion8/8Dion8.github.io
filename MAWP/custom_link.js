@@ -54,7 +54,9 @@ function remove_whitespace() {
 
 function update_bytecount() {
     var code = document.getElementById('MAWP').innerHTML
-    code = code.replace('<br', ' ')
+    console.log("Code before formatting:" + code)
+    code = code.replace(/<br>/g, '')
+    console.log("Code after formatting:" + code)
     const code_length = code.length
     console.log('code_length: ', code_length);
     document.getElementById("bytecount").innerHTML = "Code: " + code_length + " chars"
