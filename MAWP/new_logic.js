@@ -14,7 +14,7 @@ function buildbracemap(code, char1, char2) {
 }
 
 function debug_stack(stack, char, pos) {
-    if("1234567890MAWP%.!:;?[]()<>|~{}@_/\\".includes(char)){
+    if ("1234567890MAWP%.!:;?[]()<>|~{}@_/\\".includes(char)) {
         var current = document.getElementById('stack-debug').innerHTML
         document.getElementById('stack-debug').innerHTML = current.toString() + "<br>" + char.toString() + " : " + pos.toString() + " : [" + stack.toString() + "]"
     }
@@ -28,7 +28,8 @@ function debug_code() {
     if (code == "") { return }
     const input_string = document.getElementById('input').innerHTML
     var input = input_string.split("\n")
-    input.pop()
+    console.log("str: " + input_string)
+    console.log("input: " + input)
     input = input.reverse()
     console.log(input)
     document.getElementById('code-output').innerHTML = ''
