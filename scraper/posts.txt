@@ -28,4 +28,60 @@ Round towards zero https://codegolf.stackexchange.com/questions/190670/round-tow
 
 Draw an ASCII-art rainbow https://codegolf.stackexchange.com/questions/209020/draw-an-ascii-art-rainbow/209256?r=SearchResults#209256
 
-Last updated on: 2020-08-12 08:28:17
+Count up folks! https://codegolf.stackexchange.com/questions/78448/count-up-folks/209267?r=SearchResults#209267
+
+What is the smallest positive base 10 integer that can be printed by a program shorter (in c… https://codegolf.stackexchange.com/questions/67921/what-is-the-smallest-positive-base-10-integer-that-can-be-printed-by-a-program-s/209252?r=SearchResults#209252
+
+Average of your code https://codegolf.stackexchange.com/questions/207258/average-of-your-code/209139?r=SearchResults#209139
+
+Output with the same length as the code https://codegolf.stackexchange.com/questions/121056/output-with-the-same-length-as-the-code/209253?r=SearchResults#209253
+
+Pointers, pointers, pointers! https://codegolf.stackexchange.com/questions/51471/pointers-pointers-pointers/209216?r=SearchResults#209216
+
+Implement a Truth-Machine https://codegolf.stackexchange.com/questions/62732/implement-a-truth-machine/209107?r=SearchResults#209107
+
+Hello, World! (Every other character) https://codegolf.stackexchange.com/questions/128496/hello-world-every-other-character/209211?r=SearchResults#209211
+
+Shortest infinite loop producing no output https://codegolf.stackexchange.com/questions/59347/shortest-infinite-loop-producing-no-output/209212?r=SearchResults#209212
+
+Put together a Senate majority https://codegolf.stackexchange.com/questions/132428/put-together-a-senate-majority/209140?r=SearchResults#209140
+
+Draw an ASCII-art rainbow https://codegolf.stackexchange.com/questions/209020/draw-an-ascii-art-rainbow/209136?r=SearchResults#209136
+
+Produce the number 2014 without any numbers in your source code https://codegolf.stackexchange.com/questions/17005/produce-the-number-2014-without-any-numbers-in-your-source-code/209127?r=SearchResults#209127
+
+I reverse the source code, you negate the output! https://codegolf.stackexchange.com/questions/192979/i-reverse-the-source-code-you-negate-the-output/209113?r=SearchResults#209113
+
+Internal Truth Machine https://codegolf.stackexchange.com/questions/198288/internal-truth-machine/209106?r=SearchResults#209106
+
+Draw an ASCII-art rainbow https://codegolf.stackexchange.com/questions/209020/draw-an-ascii-art-rainbow/209028?r=SearchResults#209028
+
+Simple cat program https://codegolf.stackexchange.com/questions/62230/simple-cat-program/207549?r=SearchResults#207549
+
+How happy is this emoticon? https://codegolf.stackexchange.com/questions/202894/how-happy-is-this-emoticon/207438?r=SearchResults#207438
+
+1, 2, Fizz, 4, Buzz https://codegolf.stackexchange.com/questions/58615/1-2-fizz-4-buzz/207427?r=SearchResults#207427
+
+“Hello, World!” https://codegolf.stackexchange.com/questions/55422/hello-world/204613?r=SearchResults#204613
+
+Average of your code https://codegolf.stackexchange.com/questions/207258/average-of-your-code/207262?r=SearchResults#207262
+
+Triangular code, triangular output https://codegolf.stackexchange.com/questions/203062/triangular-code-triangular-output/206423?r=SearchResults#206423
+
+How happy is this emoticon? https://codegolf.stackexchange.com/questions/202894/how-happy-is-this-emoticon/206398?r=SearchResults#206398
+
+Scream very loudly https://codegolf.stackexchange.com/questions/200306/scream-very-loudly/206389?r=SearchResults#206389
+
+Numbers by Position https://codegolf.stackexchange.com/questions/201176/numbers-by-position/206386?r=SearchResults#206386
+
+Ones and Twos for days https://codegolf.stackexchange.com/questions/200985/ones-and-twos-for-days/206381?r=SearchResults#206381
+
+The alphabet in programming languages https://codegolf.stackexchange.com/questions/2078/the-alphabet-in-programming-languages/206358?r=SearchResults#206358
+
+Obfuscated Hello World https://codegolf.stackexchange.com/questions/307/obfuscated-hello-world/206325?r=SearchResults#206325
+
+Shortest code to produce infinite output https://codegolf.stackexchange.com/questions/13152/shortest-code-to-produce-infinite-output/206323?r=SearchResults#206323
+
+Make a program for printing a string in my esolang MAWP! https://codegolf.stackexchange.com/questions/204646/make-a-program-for-printing-a-string-in-my-esolang-mawp/204650?r=SearchResults#204650
+
+Last updated on: 2020-08-12 08:28:32
