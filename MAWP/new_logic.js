@@ -43,6 +43,8 @@ function debug_code() {
     var stack = [1]
     var top
     var sec
+    var pushed_int = false
+    var pushed_zero = false
     var output = ''
     const squarebracemap = buildbracemap(code, "[", "]")
     const roundbracemap = buildbracemap(code, "(", ")")
@@ -170,17 +172,20 @@ function debug_code() {
                 break;
             case '@':
                 sec = input.pop()
-                if (sec == undefined) { stack.push(0) } else {
-                    for (let i = 0; i < sec.length; ++i) {
-                        if (sec[i] == ' ') {
-                            stack.push(0)
-                        } else if (!isNaN(sec[i])) {
+                for (let i = 0; i < sec.length; ++i) {
+                    if (!isNaN(sec[i]) && sec[i] != ' ') {
+                        if (!pushed_int) {
                             stack.push(parseInt(sec[i]))
+                            pushed_int = true
                         } else {
-                            stack.push(0)
+                            stack.push(stack.pop() * 10 + parseInt(sec[i]))
                         }
+                    } else {
+                        pushed_int = false
                     }
                 }
+
+                pushed_int = false
                 break;
             case '_':
                 stack.push(stack.length)
