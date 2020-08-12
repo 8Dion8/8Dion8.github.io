@@ -28,4 +28,4 @@ Round towards zero https://codegolf.stackexchange.com/questions/190670/round-tow
 
 Draw an ASCII-art rainbow https://codegolf.stackexchange.com/questions/209020/draw-an-ascii-art-rainbow/209256?r=SearchResults#209256
 
-Last updated on: 2020-08-12 07:53:44
+Last updated on: 2020-08-12 08:07:26
