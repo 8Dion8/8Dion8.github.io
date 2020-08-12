@@ -16,14 +16,13 @@ def git_push():
     except:
         print('Some error occured while pushing the code')
 
-link = 'https://codegolf.stackexchange.com/search?tab=Active&pagesize=9999&q=%22MAWP%2c%20%22%20is%3aanswer'
+link = 'https://codegolf.stackexchange.com/search?tab=Active&pagesize=50&q=%22MAWP%2c%20%22%20is%3aanswer'
 titles = []
 links = []
 f = requests.get(link)
 soup = BeautifulSoup(f.text, 'html.parser')
 results = soup.find_all(class_="result-link")
 for i in results:
-    print(i)
     preformatted = i.text
     formatted = preformatted.replace('\n\n\r\n            A: ','')
     formatted = formatted.replace('\r\n        \n\n','')
