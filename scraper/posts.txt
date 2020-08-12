@@ -1,3 +1,9 @@
+Print a 10 by 10 grid of asterisks https://codegolf.stackexchange.com/questions/88653/print-a-10-by-10-grid-of-asterisks/209479?r=SearchResults#209479
+
+Print all ASCII alphanumeric characters without using them https://codegolf.stackexchange.com/questions/105781/print-all-ascii-alphanumeric-characters-without-using-them/209476?r=SearchResults#209476
+
+Print a 10 by 10 grid of asterisks https://codegolf.stackexchange.com/questions/88653/print-a-10-by-10-grid-of-asterisks/209465?r=SearchResults#209465
+
 Raise integer x to power x, without exponentiation built-ins https://codegolf.stackexchange.com/questions/119854/raise-integer-x-to-power-x-without-exponentiation-built-ins/209463?r=SearchResults#209463
 
 Turn an integer n into a list containing it n times https://codegolf.stackexchange.com/questions/139824/turn-an-integer-n-into-a-list-containing-it-n-times/209462?r=SearchResults#209462
@@ -80,4 +86,4 @@ The alphabet in programming languages https://codegolf.stackexchange.com/questio
 
 Obfuscated Hello World https://codegolf.stackexchange.com/questions/307/obfuscated-hello-world/206325?r=SearchResults#206325
 
-Last updated on: 2020-08-12 11:11:06
+Last updated on: 2020-08-12 18:43:05
