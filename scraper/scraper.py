@@ -23,12 +23,17 @@ f = requests.get(link)
 soup = BeautifulSoup(f.text, 'html.parser')
 results = soup.find_all(class_="result-link")
 for i in results:
-    preformatted = i.text
-    formatted = preformatted.replace('\n\n\r\n            A: ','')
-    formatted = formatted.replace('\r\n        \n\n','')
-    titles.append(formatted)
-    link_ = i.a.get('href')
-    links.append('https://codegolf.stackexchange.com'+link_)
+    link_ = 'https://codegolf.stackexchange.com' + i.a.get('href')
+    answer_id = "answer-" + link_[link_.index('#')+1:]
+    x = requests.get(link_)
+    soup_ = BeautifulSoup(x.text, 'html.parser')
+    reference_a = soup_.find(href="https://esolangs.org/wiki/MAWP")
+    if reference_a != None:
+        links.append(link_)
+        preformatted = i.text
+        formatted = preformatted.replace('\n\n\r\n            A: ','')
+        formatted = formatted.replace('\r\n        \n\n','')
+        titles.append(formatted)
 with open("scraper\posts.txt", "w") as f:
     for i in range(len(titles)):
         f.write(titles[i] + ' ' + links[i] + '\n\n')
