@@ -1,3 +1,11 @@
+Raise integer x to power x, without exponentiation built-ins https://codegolf.stackexchange.com/questions/119854/raise-integer-x-to-power-x-without-exponentiation-built-ins/209463?r=SearchResults#209463
+
+Turn an integer n into a list containing it n times https://codegolf.stackexchange.com/questions/139824/turn-an-integer-n-into-a-list-containing-it-n-times/209462?r=SearchResults#209462
+
+Surround a string with hashes https://codegolf.stackexchange.com/questions/57845/surround-a-string-with-hashes/209227?r=SearchResults#209227
+
+Shortest code to produce infinite output https://codegolf.stackexchange.com/questions/13152/shortest-code-to-produce-infinite-output/206323?r=SearchResults#206323
+
 Stay away from zero https://codegolf.stackexchange.com/questions/118444/stay-away-from-zero/209446?r=SearchResults#209446
 
 Print numbers from 1 to 10 https://codegolf.stackexchange.com/questions/86075/print-numbers-from-1-to-10/209447?r=SearchResults#209447
@@ -9,8 +17,6 @@ Surround a string with hashes https://codegolf.stackexchange.com/questions/57845
 Is this even or odd? https://codegolf.stackexchange.com/questions/113448/is-this-even-or-odd/209401?r=SearchResults#209401
 
 Is this even or odd? https://codegolf.stackexchange.com/questions/113448/is-this-even-or-odd/209372?r=SearchResults#209372
-
-Surround a string with hashes https://codegolf.stackexchange.com/questions/57845/surround-a-string-with-hashes/209227?r=SearchResults#209227
 
 Round towards zero https://codegolf.stackexchange.com/questions/190670/round-towards-zero/209288?r=SearchResults#209288
 
@@ -74,6 +80,4 @@ The alphabet in programming languages https://codegolf.stackexchange.com/questio
 
 Obfuscated Hello World https://codegolf.stackexchange.com/questions/307/obfuscated-hello-world/206325?r=SearchResults#206325
 
-Shortest code to produce infinite output https://codegolf.stackexchange.com/questions/13152/shortest-code-to-produce-infinite-output/206323?r=SearchResults#206323
-
-Last updated on: 2020-08-12 08:48:55
+Last updated on: 2020-08-12 11:11:06
