@@ -1,5 +1,20 @@
 import requests
 from bs4 import BeautifulSoup
+from time import gmtime, strftime
+
+import git
+PATH_OF_GIT_REPO = r'k:\8Dion8.github.io\.git'
+COMMIT_MESSAGE = 'Update post info'
+
+def git_push():
+    try:
+        repo = git.Repo(PATH_OF_GIT_REPO)
+        repo.git.add(update=True)
+        repo.index.commit(COMMIT_MESSAGE)
+        origin = repo.remote(name='origin')
+        origin.push()
+    except:
+        print('Some error occured while pushing the code')
 
 link = 'https://codegolf.stackexchange.com/search?tab=active&q="MAWP%2c%20"%20is%3aanswer'
 titles = []
@@ -16,4 +31,7 @@ for i in results:
     links.append('https://codegolf.stackexchange.com'+link_)
 with open("scraper\posts.txt", "w") as f:
     for i in range(len(titles)):
-        f.write(titles[i] + ' ' + links[i] + '\n')
+        f.write(titles[i] + ' ' + links[i] + '\n\n')
+    f.write('Last updated on: ')
+    f.write(strftime("%Y-%m-%d %H:%M:%S", gmtime()))
+git_push()
