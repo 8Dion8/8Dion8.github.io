@@ -16,7 +16,7 @@ def git_push():
     except:
         print('Some error occured while pushing the code')
 
-link = 'https://codegolf.stackexchange.com/search?tab=Active&pagesize=999&q=%22MAWP%2c%20%22%20is%3aanswer'
+link = 'https://codegolf.stackexchange.com/search?tab=Active&pagesize=100&q=%22MAWP%2c%20%22%20is%3aanswer'
 titles = []
 links = []
 f = requests.get(link)
