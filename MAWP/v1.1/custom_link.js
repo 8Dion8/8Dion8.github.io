@@ -19,21 +19,21 @@ serialize = function(obj) {
 }
 
 function generate_link() {
-    var code_ = document.getElementById('MAWP').innerHTML;
+    var code_ = document.getElementById('MAWP').value;
     code_ = code_.replace(/<br>/g, '')
     code_ = code_.replace('&lt;', '<')
     code_ = code_.replace('&gt;', '>')
     const input_ = document.getElementById('input').innerHTML
     obj = { code: code_, input: input_ }
     query = serialize(obj)
-    link = "https://8dion8.github.io/MAWP/?" + query
+    link = "https://8dion8.github.io/MAWP/v1.1?" + query
     document.getElementById('code-output').innerHTML = link
     return link
 }
 
 function codegolf() {
     const link = generate_link()
-    var code = document.getElementById('MAWP').innerHTML
+    var code = document.getElementById('MAWP').value
     code = code.replace(/<br>/g, '')
     console.log(code)
     const byte_count = code.length
@@ -52,7 +52,7 @@ function copy_text() {
 }
 
 function remove_whitespace() {
-    var code = document.getElementById('MAWP').vlaue
+    var code = document.getElementById('MAWP').value
     document.getElementById('MAWP').value = code.replace(/\s/g, '')
 }
 
