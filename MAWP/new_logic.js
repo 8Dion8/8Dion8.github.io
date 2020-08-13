@@ -22,7 +22,7 @@ function debug_stack(stack, char, pos) {
 
 function debug_code() {
     var t0 = performance.now()
-    var code = document.getElementById('MAWP').innerText
+    var code = document.getElementById('MAWP').value
     code = code.replace("<br>", "")
     code = code.replace('&lt;', '<')
     code = code.replace('&gt;', '>')
