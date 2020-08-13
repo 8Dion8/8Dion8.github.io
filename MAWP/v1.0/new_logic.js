@@ -44,6 +44,7 @@ function debug_code() {
     var top
     var sec
     var output = ''
+    var executed = 0;
     const squarebracemap = buildbracemap(code, "[", "]")
     const roundbracemap = buildbracemap(code, "(", ")")
     const longcondbracemap = buildbracemap(code, "<", ">")
@@ -187,6 +188,7 @@ function debug_code() {
                 break;
         }
         pos += 1
+        executed += 1
 
         if (output.length > 2048) {
             document.getElementById('code-output').innerHTML = output
@@ -203,6 +205,12 @@ function debug_code() {
 
 
         if (pos == code.length) {
+            document.getElementById('code-output').innerHTML = output
+            var t1 = performance.now()
+            document.getElementById('code-time').innerHTML = ((t1 - t0) / 1000).toFixed(3) + " seconds elapsed";
+            return 1
+        }
+        if (executed > 65536) {
             document.getElementById('code-output').innerHTML = output
             var t1 = performance.now()
             document.getElementById('code-time').innerHTML = ((t1 - t0) / 1000).toFixed(3) + " seconds elapsed";
