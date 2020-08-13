@@ -210,7 +210,7 @@ function debug_code() {
             document.getElementById('code-time').innerHTML = ((t1 - t0) / 1000).toFixed(3) + " seconds elapsed";
             return 1
         }
-        if (executed > 65536) {
+        if (executed > 8191) {
             document.getElementById('code-output').innerHTML = output
             var t1 = performance.now()
             document.getElementById('code-time').innerHTML = ((t1 - t0) / 1000).toFixed(3) + " seconds elapsed";
