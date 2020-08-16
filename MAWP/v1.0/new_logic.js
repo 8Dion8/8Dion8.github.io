@@ -36,8 +36,8 @@ function debug_code() {
     console.log(input)
     document.getElementById('code-output').innerHTML = ''
     document.getElementById('stack-debug').innerHTML = 'chr:pos:stack'
-        //
-        //
+    var max_o = document.getElementById('max-output').value
+    var max_e = document.getElementById('max-execs').value
     var char = ''
     var pos = 0
     var stack = [1]
@@ -190,7 +190,7 @@ function debug_code() {
         pos += 1
         executed += 1
 
-        if (output.length > 1024) {
+        if (output.length > max_o) {
             document.getElementById('code-output').innerHTML = output
             document.getElementById('code-output').innerHTML = output + "\nOutput reached limit of 1kb and was truncated."
             var t1 = performance.now()
@@ -211,7 +211,7 @@ function debug_code() {
             document.getElementById('code-time').innerHTML = ((t1 - t0) / 1000).toFixed(3) + " seconds elapsed";
             return 1
         }
-        if (executed > 4095) {
+        if (executed > max_e) {
             document.getElementById('code-output').innerHTML = output
             var t1 = performance.now()
             document.getElementById('code-time').innerHTML = ((t1 - t0) / 1000).toFixed(3) + " seconds elapsed";

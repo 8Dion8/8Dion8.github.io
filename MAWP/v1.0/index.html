@@ -117,14 +117,6 @@
                 <td>@</td>
                 <td>Pushes whole input byte by byte. If character is an integer, then push that integer. Else push a 0</td>
             </tr>
-            <tr>
-                <td>/</td>
-                <td>Cycles stack clockwise</td>
-            </tr>
-            <tr>
-                <td>\</td>
-                <td>Cycles stack anticlockwise</td>
-            </tr>
         </table>
     </div>
     <div id="middle-section" style="float: left; width: 500;">
@@ -136,7 +128,9 @@
         <button onclick="generate_link();">Generate link</button>
         <button onclick="codegolf();">Generate Codegolf submission</button>
         <button onclick="copy_text();">Copy output</button>
-        <button onclick="remove_whitespace();">Remove whitespace</button>
+        <button onclick="remove_whitespace();">Remove whitespace</button><br>
+        <input type="number" id="max-output" name="Max output size" value="1024">
+        <input type="number" id="max-execs" name="Max operation execution" value="4096">
         <pre id="code-output">Output will appear here.</pre><br>
         <div id="code-time">Time of code executing will appear here</div>
         <h3>Char to ASCII reference:</h3>

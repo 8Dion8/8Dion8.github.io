@@ -175,3 +175,17 @@ td {
 #switch {
     margin-left: 0px;
 }
+
+#max-output,
+#max-execs {
+    background-color: #130303;
+    font-family: monospace;
+    color: #E6E6E9;
+    border: #E23D28;
+    border-radius: 4px;
+    border-style: double;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    transition-duration: 0.4s;
+}

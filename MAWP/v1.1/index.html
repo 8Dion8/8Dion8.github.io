@@ -136,7 +136,10 @@
         <button onclick="generate_link();">Generate link</button>
         <button onclick="codegolf();">Generate Codegolf submission</button>
         <button onclick="copy_text();">Copy output</button>
-        <button onclick="remove_whitespace();">Remove whitespace</button>
+        <button onclick="remove_whitespace();">Remove whitespace</button><br>
+        <div id="max-o">Max output size:</div>
+        <input type="number" id="max-output" name="Max output size" value="1024">
+        <input type="number" id="max-execs" name="Max operation execution" value="4096">
         <pre id="code-output">Output will appear here.</pre><br>
         <div id="code-time">Time of code executing will appear here</div>
         <h3>Char to ASCII reference:</h3>
