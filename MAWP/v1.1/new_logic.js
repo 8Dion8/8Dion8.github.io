@@ -45,6 +45,7 @@ function debug_code() {
     var sec
     var executed = 0
     var output = ''
+    var pushed_int = false
     const squarebracemap = buildbracemap(code, "[", "]")
     const roundbracemap = buildbracemap(code, "(", ")")
     const longcondbracemap = buildbracemap(code, "<", ">")
