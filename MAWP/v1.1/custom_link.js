@@ -6,7 +6,7 @@ function load_custom() {
     const input = urlParams.get('input')
         //console.log(code, input);
     document.getElementById('MAWP').value = code
-    document.getElementById('input').innerHTML = input
+    document.getElementById('input').value = input
 }
 
 serialize = function(obj) {
@@ -23,7 +23,7 @@ function generate_link() {
     code_ = code_.replace(/<br>/g, '')
     code_ = code_.replace('&lt;', '<')
     code_ = code_.replace('&gt;', '>')
-    const input_ = document.getElementById('input').innerHTML
+    const input_ = document.getElementById('input').value
     obj = { code: code_, input: input_ }
     query = serialize(obj)
     link = "https://8dion8.github.io/MAWP/v1.1?" + query

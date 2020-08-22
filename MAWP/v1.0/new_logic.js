@@ -28,7 +28,7 @@ function debug_code() {
     code = code.replace('&gt;', '>')
     console.log(code)
     if (code == "") { return }
-    const input_string = document.getElementById('input').innerHTML
+    const input_string = document.getElementById('input').value
     var input = input_string.split("\n")
     console.log("str: " + input_string)
     console.log("input: " + input)
