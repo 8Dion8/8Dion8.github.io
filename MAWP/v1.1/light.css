@@ -1,20 +1,20 @@
 body {
     font-family: monospace;
     font-size: 1.2vw;
-    background-color: #130303;
+    background-color: #e6e6e9;
     transition-duration: 0.4s;
 }
 
 h1,
 div,
 p {
-    color: #E6E6E9;
+    color: #130303;
 }
 
 button {
-    background-color: #130303;
+    background-color: #e6e6e9;
     font-family: monospace;
-    color: #E6E6E9;
+    color: #130303;
     border: #E23D28;
     border-radius: 4px;
     border-style: double;
@@ -25,7 +25,7 @@ button {
 }
 
 button:hover {
-    background-color: #130303;
+    background-color: #e6e6e9;
     color: #E23D28;
 }
 
@@ -49,9 +49,10 @@ button:hover {
     border: #E23D28;
     border-radius: 4px;
     border-style: double;
+    border-radius: 4px;
     box-sizing: border-box;
-    background-color: #130303;
-    color: #E6E6E9;
+    background-color: #e6e6e9;
+    color: #130303;
     font-size: 1.5vw;
     font-family: monospace;
     display: inline-block;
@@ -59,6 +60,7 @@ button:hover {
     margin-right: 10px;
     margin-bottom: 10px;
     transition-duration: 0.4s;
+    resize: vertical;
 }
 
 #input {
@@ -70,8 +72,8 @@ button:hover {
     border-radius: 4px;
     border-style: double;
     box-sizing: border-box;
-    background-color: #130303;
-    color: #E6E6E9;
+    background-color: #e6e6e9;
+    color: #130303;
     margin-left: 10px;
     margin-right: 10px;
     margin-bottom: 10px;
@@ -138,7 +140,7 @@ button:hover {
 table,
 th,
 td {
-    border: 1px solid #E6E6E9;
+    border: 1px solid #130303;
 }
 
 #reference {
@@ -163,8 +165,8 @@ td {
     border-radius: 4px;
     border-style: double;
     box-sizing: border-box;
-    background-color: #130303;
-    color: #E6E6E9;
+    background-color: #e6e6e9;
+    color: #130303;
     margin-left: 10px;
     margin-right: 10px;
     margin-bottom: 10px;
@@ -173,4 +175,18 @@ td {
 
 #switch {
     margin-left: 0px;
+}
+
+#max-output,
+#max-execs {
+    background-color: #E6E6E9;
+    font-family: monospace;
+    color: #130303;
+    border: #E23D28;
+    border-radius: 4px;
+    border-style: double;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    transition-duration: 0.4s;
 }

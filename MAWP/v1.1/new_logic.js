@@ -21,14 +21,13 @@ function debug_stack(stack, char, pos) {
 }
 
 function debug_code() {
-    var t0 = performance.now()
-    var code = document.getElementById('MAWP').innerText
+    var code = document.getElementById('MAWP').value
     code = code.replace("<br>", "")
     code = code.replace('&lt;', '<')
     code = code.replace('&gt;', '>')
     console.log(code)
     if (code == "") { return }
-    const input_string = document.getElementById('input').innerHTML
+    const input_string = document.getElementById('input').value
     var input = input_string.split("\n")
     console.log("str: " + input_string)
     console.log("input: " + input)
@@ -36,18 +35,24 @@ function debug_code() {
     console.log(input)
     document.getElementById('code-output').innerHTML = ''
     document.getElementById('stack-debug').innerHTML = 'chr:pos:stack'
-        //
-        //
+    var max_o = document.getElementById('max-output').value
+    var max_e = document.getElementById('max-execs').value
     var char = ''
     var pos = 0
     var stack = [1]
     var top
     var sec
+<<<<<<< HEAD:MAWP/new_logic.js
     var pushed_int = false
     var pushed_zero = false
     var pushingString = false
     var pushedFirstNum
+=======
+    var executed = 0
+>>>>>>> c0e9ca93af445bbab01cd0d35599591ad4a02759:MAWP/v1.1/new_logic.js
     var output = ''
+    var pushed_int = false
+    var t0 = performance.now()
     const squarebracemap = buildbracemap(code, "[", "]")
     const roundbracemap = buildbracemap(code, "(", ")")
     const longcondbracemap = buildbracemap(code, "<", ">")
@@ -204,10 +209,11 @@ function debug_code() {
             }
         }
         pos += 1
+        executed += 1
 
-        if (output.length > 2048) {
+        if (output.length > max_o) {
             document.getElementById('code-output').innerHTML = output
-            document.getElementById('code-output').innerHTML = output + "\nOutput reached limit of 2kb and was truncated."
+            document.getElementById('code-output').innerHTML = output + "\nOutput reached limit of 1kb and was truncated."
             var t1 = performance.now()
             document.getElementById('code-time').innerHTML = ((t1 - t0) / 1000).toFixed(3) + " seconds elapsed";
             return 0
@@ -217,9 +223,14 @@ function debug_code() {
         console.log('char: ', char);
         console.log('char type: ', typeof char);
         console.log('stack: ', stack);
-
-
+        console.log("executed:", executed)
         if (pos == code.length) {
+            document.getElementById('code-output').innerHTML = output
+            var t1 = performance.now()
+            document.getElementById('code-time').innerHTML = ((t1 - t0) / 1000).toFixed(3) + " seconds elapsed";
+            return 1
+        }
+        if (executed > max_e) {
             document.getElementById('code-output').innerHTML = output
             var t1 = performance.now()
             document.getElementById('code-time').innerHTML = ((t1 - t0) / 1000).toFixed(3) + " seconds elapsed";
