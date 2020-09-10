@@ -72,7 +72,7 @@ function debug_code() {
                     stack.push(parseInt(char))
                     pushedFirstNum = true
                 } else {
-                    stack.push(parseInt(toString(stack.pop()) + char))
+                    stack.push(parseInt(stack.pop().toString() + char))
                 }
             } else {
                 pushedFirstNum = false
@@ -86,7 +86,7 @@ function debug_code() {
                     top = stack.pop()
                     sec = stack.pop()
                     if (typeof top == "string" || typeof sec == "string") {
-                        stack.push(toString(sec) + toString(top))
+                        stack.push(sec.toString() + top.toString())
                     } else {
                         stack.push(top + sec)
                     }
@@ -104,13 +104,15 @@ function debug_code() {
                 case '*':
                     top = stack.pop()
                     sec = stack.pop()
-                    if (typeof top == "string" || typeof sec == "string") {
+                    if (typeof top == "string" && typeof sec == "string") {
                         stack.push.apply(stack, [sec, top, 0])
                     } else {
                         if (typeof top == "string") {
                             stack.push(top.repeat(sec))
-                        } else {
+                        } else if (typeof sec == "string") {
                             stack.push(sec.repeat(top))
+                        } else {
+                            stack.push(top * sec)
                         }
                     }
                     break;
@@ -124,6 +126,8 @@ function debug_code() {
                     }
                     break;
                 case '%':
+                    top = stack.pop()
+                    sec = stack.pop()
                     if (typeof top != "string" && typeof sec != "string") {
                         stack.push(sec % top)
                     } else {
@@ -180,10 +184,10 @@ function debug_code() {
                 case ';':
                     var top = stack.pop()
                     if (typeof top != "string") {
-                        output += fromCharCode(top)
+                        output += String.fromCharCode(top)
                     } else {
                         for (let i = 0; i < top.length; ++i) {
-                            output += toString(i.charCodeAt(0)) + ' '
+                            output += i.charCodeAt(0).toString() + ' '
                         }
                     }
                     break;
