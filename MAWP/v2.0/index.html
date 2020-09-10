@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mawp Interpreter</title>
+
+    <script src="new_logic.js"></script>
+    <script src="custom_link.js"></script>
+    <script src="reference.js"></script>
+    <script src="theme_switch.js"></script>
+
+    <link id="theme" rel="stylesheet" href="dark.css">
+    <link rel="icon" href="logo.ico">
+
+    <button id="switch" onclick="control_theme()">Switch theme</button>
+    <button onclick="location.href='https://8dion8.github.io/MAWP/v1.0/';">Switch to MAWP 1.0</button><br>
+    <h1>Version 2.0 (latest)</h1>
+</head>
+
+<body onload="load_custom();update_bytecount();">
+    <div id="left-section" style="float: left; width: 200;">
+        <img src="logo.ico">
+        <p>MAWP is a stack-based, esoteric programming language written in 2020. Here is the list of current availible commands:</p><br>
+        <table>
+            <tr>
+                <th>Symbol</th>
+                <th>Meaning</th>
+            </tr>
+            <tr>
+                <td>M</td>
+                <td>Takes top two values of the stack and sums them.</td>
+            </tr>
+            <tr>
+                <td>A</td>
+                <td>Takes top two values of the stack and returns the absolute difference.</td>
+            </tr>
+            <tr>
+                <td>W</td>
+                <td>Takes top two values of the stack and multiplies them.</td>
+            </tr>
+            <tr>
+                <td>P</td>
+                <td>Takes top two values of the stack and floor divides the second by the other.</td>
+            </tr>
+            <tr>
+                <td>%</td>
+                <td>Pops top of stack.</td>
+            </tr>
+            <tr>
+                <td>!</td>
+                <td>Duplicates top of stack.</td>
+            </tr>
+            <tr>
+                <td>:</td>
+                <td>Prints top of stack without newline, removing it.</td>
+            </tr>
+            <tr>
+                <td>;</td>
+                <td>Prints top of stack as ascii char without newline, removing it.</td>
+            </tr>
+            <tr>
+                <td>.</td>
+                <td>Terminates program</td>
+            </tr>
+            <tr>
+                <td>[</td>
+                <td>Start of loop. jumps to its ] if top of stack equals to 0</td>
+            </tr>
+            <tr>
+                <td>]</td>
+                <td>End of loop. If top of stack doesn't equal to 0, then moves back to start of loop.</td>
+            </tr>
+            <tr>
+                <td>(</td>
+                <td>Start of inverted [] loop. Jumps to its ) if top of stack doesn't equal to 0</td>
+            </tr>
+            <tr>
+                <td>)</td>
+                <td>End of inverted [] loop. Jumps to its ( if top of stack equals to 0</td>
+            </tr>
+            <tr>
+                <td>
+                    &lt;</td>
+                <td>Long conditional. If top of stack doesn't equal to 0, jumps to its ></td>
+            </tr>
+            <tr>
+                <td>></td>
+                <td>End of long conditional</td>
+            </tr>
+            <tr>
+                <td>_</td>
+                <td>Pushes length of stack</td>
+            </tr>
+            <tr>
+                <td>?</td>
+                <td>Short conditional. If top of stack doesn't equal to 0, skips next operator.</td>
+            </tr>
+            <tr>
+                <td>|</td>
+                <td>Pushes whole input byte by byte by its ASCII value</td>
+            </tr>
+            <tr>
+                <td>~</td>
+                <td>Reverses the stack</td>
+            </tr>
+            <tr>
+                <td>{</td>
+                <td>Long inverted conditional. If top of stack equals to 0, jumps to its }</td>
+            </tr>
+            <tr>
+                <td>}</td>
+                <td>End of long inverted conditional</td>
+            </tr>
+            <tr>
+                <td>@</td>
+                <td>Pushes whole input byte by byte. If character is an integer, then push that integer. Else push a 0</td>
+            </tr>
+            <tr>
+                <td>/</td>
+                <td>Cycles stack clockwise</td>
+            </tr>
+            <tr>
+                <td>\</td>
+                <td>Cycles stack anticlockwise</td>
+            </tr>
+        </table>
+    </div>
+    <div id="middle-section" style="float: left; width: 500;">
+        <div class="label" id="bytecount">Code: 0 chars</div>
+        <textarea id="MAWP" oninput="update_bytecount();"></textarea>
+        <div class="label">Input:</div>
+        <textarea id="input" contenteditable></textarea>
+        <button onclick="setTimeout(debug_code,0)">Run code</button>
+        <button onclick="generate_link();">Generate link</button>
+        <button onclick="codegolf();">Generate Codegolf submission</button>
+        <button onclick="copy_text();">Copy output</button>
+        <button onclick="remove_whitespace();">Remove whitespace</button><br>
+        <div>Max output size --- Max executions</div>
+        <input type="number" id="max-output" name="Max output size" value="1024">
+        <input type="number" id="max-execs" name="Max operation execution" value="4096">
+        <pre id="code-output">Output will appear here.</pre><br>
+        <div id="code-time">Time of code executing will appear here</div>
+        <h3>Char to ASCII reference:</h3>
+        <input id="reference-input" type="text" oninput="generate_reference()">
+        <div id="reference"></div>
+        <h3 class="label">Latest added features:</h3>
+        <table>
+            <tr>
+                <td>Target</td>
+                <td>Description</td>
+            </tr>
+            <tr>
+                <td>/</td>
+                <td>Cycles stack clockwise</td>
+            </tr>
+            <tr>
+                <td>\</td>
+                <td>Cycles stack anticlockwise</td>
+            </tr>
+            <tr>
+                <td>Input</td>
+                <td>Now supports multiline input. Each stack will take in one line each call, and will push a 0 if there are no lines left</td>
+            </tr>
+        </table>
+    </div>
+    <div id="right-section" style="float: left; width: 200;">
+        <div id="stack-debug">The stack will appear here.</div>
+    </div>
+
+</body>
+
+</html>
