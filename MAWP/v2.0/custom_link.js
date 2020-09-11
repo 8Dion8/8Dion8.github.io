@@ -26,7 +26,7 @@ function generate_link() {
     const input_ = document.getElementById('input').value
     obj = { code: code_, input: input_ }
     query = serialize(obj)
-    link = "https://8dion8.github.io/MAWP/v1.1?" + query
+    link = "https://8dion8.github.io/MAWP/v2.0?" + query
     document.getElementById('code-output').innerHTML = link
     return link
 }

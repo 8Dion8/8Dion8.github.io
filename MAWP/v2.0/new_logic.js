@@ -279,7 +279,6 @@ function debug_code() {
         executed += 1
 
         if (output.length > max_o) {
-            document.getElementById('code-output').innerHTML = output
             document.getElementById('code-output').innerHTML = output + "\nOutput reached limit of 1kb and was truncated."
             var t1 = performance.now()
             document.getElementById('code-time').innerHTML = ((t1 - t0) / 1000).toFixed(3) + " seconds elapsed";
