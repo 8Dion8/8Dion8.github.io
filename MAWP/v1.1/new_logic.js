@@ -42,6 +42,8 @@ function debug_code() {
     var stack = [1]
     var top
     var sec
+    var pushed_int = false
+    var pushed_zero = false
     var executed = 0
     var output = ''
     var pushed_int = false
@@ -199,6 +201,7 @@ function debug_code() {
                 stack.push(sec)
                 break;
         }
+
         pos += 1
         executed += 1
 
