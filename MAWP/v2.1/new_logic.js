@@ -94,7 +94,7 @@ function debug_code() {
                     console.log("added func " + char)
                     for (let i = pos + 1; i < code.length; i++) {
                         temp_char = code[i]
-                        if (temp_char == '^') {
+                        if (temp_char == '#') {
                             custom_funcs[char] = custom_func
                             break
                         } else {
@@ -156,6 +156,15 @@ function debug_code() {
                     sec = stack.pop()
                     if (typeof top != "string" && typeof sec != "string") {
                         stack.push(sec % top)
+                    } else {
+                        stack.push.apply(stack, [sec, top, 0])
+                    }
+                    break;
+                case '^':
+                    top = stack.pop()
+                    sec = stack.pop()
+                    if (typeof top != "string" && typeof sec != "string") {
+                        stack.push(Math.pow(sec, top))
                     } else {
                         stack.push.apply(stack, [sec, top, 0])
                     }
