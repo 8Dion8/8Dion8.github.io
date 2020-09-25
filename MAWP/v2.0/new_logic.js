@@ -20,7 +20,7 @@ function debug_stack(stack, char, pos) {
     }
 }
 
-function debug_code() {
+function debug_code(debug_) {
     var code = document.getElementById('MAWP').value
     code = code.replace("<br>", "")
     code = code.replace('&lt;', '<')
@@ -284,8 +284,9 @@ function debug_code() {
             document.getElementById('code-time').innerHTML = ((t1 - t0) / 1000).toFixed(3) + " seconds elapsed";
             return 0
         }
-
-        debug_stack(stack, char, pos)
+        if (debug_) {
+            debug_stack(stack, char, pos)
+        }
         console.log('char: ', char);
         console.log('char type: ', typeof char);
         console.log('stack: ', stack);

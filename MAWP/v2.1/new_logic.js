@@ -13,6 +13,41 @@ function buildbracemap(code, char1, char2) {
     return bracemap
 }
 
+function replace_all_funcs(code) {
+    var custom_funcs = {}
+    var i = 0;
+    while (true) {
+        char = code[i]
+        if ('qwertyuiopasdfghjklzxcvbnm'.includes(char)) {
+            var temp_char = ''
+            var custom_func = ''
+            if (Object.keys(custom_funcs).includes(char)) {
+                console.log("replaced func " + char)
+                console.log(custom_funcs)
+                code = code.replaceToFunc(i, custom_funcs[char])
+                i--
+                console.log(code)
+            } else {
+                console.log("added func " + char)
+                for (let j = i + 1; j < code.length; j++) {
+                    temp_char = code[j]
+                    if (temp_char == '#') {
+                        custom_funcs[char] = custom_func
+                        break
+                    } else {
+                        custom_func += temp_char
+                    }
+                }
+            }
+        }
+        i++
+        if (i < code.length) {
+            break
+        }
+    }
+    return code
+}
+
 String.prototype.replaceToFunc = function(index, replacement) {
     console.log("AAAAAAAAAA", this)
     let x = this.split('')
@@ -29,6 +64,8 @@ function debug_stack(stack, char, pos) {
 
 function debug_code() {
     var code = document.getElementById('MAWP').value
+    console.log(code)
+    code = replace_all_funcs(code)
     console.log(code)
     if (code == "") { return }
     const input_string = document.getElementById('input').value
@@ -80,28 +117,6 @@ function debug_code() {
                 }
             } else {
                 pushedFirstNum = false
-            }
-            if ('qwertyuiopasdfghjklzxcvbnm'.includes(char)) {
-                var temp_char = ''
-                var custom_func = ''
-                if (Object.keys(custom_funcs).includes(char)) {
-                    console.log("replaced func " + char)
-                    console.log(custom_funcs)
-                    code = code.replaceToFunc(pos, custom_funcs[char])
-                    pos--
-                    console.log(code)
-                } else {
-                    console.log("added func " + char)
-                    for (let i = pos + 1; i < code.length; i++) {
-                        temp_char = code[i]
-                        if (temp_char == '#') {
-                            custom_funcs[char] = custom_func
-                            break
-                        } else {
-                            custom_func += temp_char
-                        }
-                    }
-                }
             }
             switch (char) {
                 case ' ':

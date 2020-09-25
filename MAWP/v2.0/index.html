@@ -133,7 +133,8 @@
         <textarea id="MAWP" oninput="update_bytecount();"></textarea>
         <div class="label">Input:</div>
         <textarea id="input" contenteditable></textarea>
-        <button onclick="setTimeout(debug_code,0)">Run code</button>
+        <button onclick="setTimeout(debug_code(false),0)">Run code</button>
+        <button onclick="setTimeout(debug_code(true),0)">Debug code</button>
         <button onclick="generate_link();">Generate link</button>
         <button onclick="codegolf();">Generate Codegolf submission</button>
         <button onclick="copy_text();">Copy output</button>
