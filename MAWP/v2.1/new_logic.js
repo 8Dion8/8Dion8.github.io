@@ -41,7 +41,7 @@ function replace_all_funcs(code) {
             }
         }
         i++
-        if (i < code.length) {
+        if (i > code.length) {
             break
         }
     }
