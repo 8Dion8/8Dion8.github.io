@@ -16,3 +16,12 @@
 <tr><td>[]</td><td>Loop, skip if top is 0</td><td>Loop, skip if top is an empty string</td><td>Loop, skip if top isn't 0</td><td>Loop, skip if top isn't an empty string</td></tr>
 <tr><td>{}</td><td>Long conditional, skip if top is 0</td><td>Long conditional, skip if top is an empty string</td><td>Long conditional, skip if top isn't 0</td><td>Long conditional, skip if top isn't an empty string</td></tr>
 </table>
+<table>
+<tr><td>Symbol</td><td>Normal/number-number</td><td>Normal/number-string</td><td>Normal/String-String</td><td>#/number-number</td><td>#/number-string</td><td>#/String-String</td></tr>
+<tr><td>+</td><td>Addition</td><td>Convert number to string and concatenate</td><td></td><td></td><td></td><td></td></tr>
+<tr><td>-</td><td>Subtraction</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>*</td><td>Multiplication</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>$</td><td>Division</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>%</td><td>Modulo</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>=</td><td>Equals</td></tr>
+</table>
