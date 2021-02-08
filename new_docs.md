@@ -1,27 +1,27 @@
-<table>
-<tr><td>Symbol</td><td>Normal</td><td>#</td></tr>
-<tr><td>0-9</td><td>Push a number</td><td>The same but in string form</td></tr>
-<tr><td>!</td><td>Duplicate the top of stack</td><td>Quadruplicate top of stack</td></tr>
-<tr><td>|</td><td>Input as ASCII codes</td><td>Input as strings of ASCII codes</td></tr>
-<tr><td>@</td><td>Input as number</td><td>Input as strings</td></tr>
-<tr><td>~</td><td>Reverse stack</td><td></td></tr>
-<tr><td>_</td><td>Push length of stack</td><td></td></tr>
-<tr><td>.</td><td>Break loop</td><td>Terminate program</td></tr>
-</table>
-<table>
-<tr><td>Symbol</td><td>Normal/Number</td><td>Normal/String</td><td>#/Number</td><td>#/String</td></tr>
-<tr><td>:</td><td>Output as Number</td><td>Output as string</td><td></td><td></td></tr>
-<tr><td>;</td><td>Output as ASCII char</td><td>Output as sequence of ASCII codes</td><td></td><td></td></tr>
-<tr><td>?</td><td>If top of stack is 0 skip next symbol</td><td>If top of stack is an empty string skip next symbol</td><td>If top of stack isn't 0 skip next symbol</td><td>If top of stack isn't an empty string skip next symbol</td></tr>
-<tr><td>[]</td><td>Loop, skip if top is 0</td><td>Loop, skip if top is an empty string</td><td>Loop, skip if top isn't 0</td><td>Loop, skip if top isn't an empty string</td></tr>
-<tr><td>{}</td><td>Long conditional, skip if top is 0</td><td>Long conditional, skip if top is an empty string</td><td>Long conditional, skip if top isn't 0</td><td>Long conditional, skip if top isn't an empty string</td></tr>
-</table>
-<table>
-<tr><td>Symbol</td><td>Normal/number-number</td><td>Normal/number-string</td><td>Normal/String-String</td><td>#/number-number</td><td>#/number-string</td><td>#/String-String</td></tr>
-<tr><td>+</td><td>Addition</td><td>Convert number to string and concatenate</td><td></td><td></td><td></td><td></td></tr>
-<tr><td>-</td><td>Subtraction</td><td></td><td></td><td></td><td></td><td></td></tr>
-<tr><td>*</td><td>Multiplication</td><td></td><td></td><td></td><td></td><td></td></tr>
-<tr><td>$</td><td>Division</td><td></td><td></td><td></td><td></td><td></td></tr>
-<tr><td>%</td><td>Modulo</td><td></td><td></td><td></td><td></td><td></td></tr>
-<tr><td>=</td><td>Equals</td></tr>
-</table>
+| Symbol | Normal                     | #                                    |
+|--------|----------------------------|--------------------------------------|
+| 0-9    | Push a number              | The same but in string form          |
+| !      | Duplicate the top of stack | Quadruplicate top of stack           |
+| \|     | Input as ASCII codes       | Input as strings of ASCII codes      |
+| @      | Input as number            | Input as strings                     |
+| ~      | Reverse stack              | Apply function to all of stack (map) |
+| _      | Push length of stack       | Push length of top of stack          |
+| .      | Break loop                 | Terminate program                    |
+
+
+| Symbol | Normal/Number                         | Normal/String                                       | #/Number                                 | #/String                                               |
+|--------|---------------------------------------|-----------------------------------------------------|------------------------------------------|--------------------------------------------------------|
+| :      | Output as Number                      | Output as string                                    | Convert to binary representation         | Convert from binary to base 10                         |
+| ;      | Output as ASCII char                  | Output as sequence of ASCII codes                   | Convert to hexadecimal                   | Convert from hexadecimal to base 10                    |
+| ?      | If top of stack is 0 skip next symbol | If top of stack is an empty string skip next symbol | If top of stack isn't 0 skip next symbol | If top of stack isn't an empty string skip next symbol |
+| []     | Loop, skip if top is 0                | Loop, skip if top is an empty string                | Loop, skip if top isn't 0                | Loop, skip if top isn't an empty string                |
+| {}     | Long conditional, skip if top is 0    | Long conditional, skip if top is an empty string    | Long conditional, skip if top isn't 0    | Long conditional, skip if top isn't an empty string    |
+
+| Symbol | Normal/number-number | Normal/number-string                     | Normal/String-String | #/number-number      | #/number-string                                       | #/String-String                                              |
+|--------|----------------------|------------------------------------------|----------------------|----------------------|-------------------------------------------------------|--------------------------------------------------------------|
+| +      | Addition             | Convert number to string and concatenate | Concatenate          | [a, b]               | a[b]                                                  | Contents of regex match.                                     |
+| -      | Subtraction          | remove last n characters                 | a.remove(b)          | [a, b)               | a[b:]                                                 | Split on regex.                                              |
+| *      | Multiplication       | Repeat string n times                    | Interleave           | Exponentiation       | a[:b]                                                 | Join a on b                                                  |
+| $      | Division             | Divide into chunks of length n           | Split                | Integer division     | `a` from base ten to base `b` (using `b` as alphabet) | Contains                                                     |
+| %      | Modulo               | Last chunk of length n                   | String formatting    | a to base b from ten | Each character repeated `n` times                     | Bijective base conversion (`a` with alphabet `b` to base 10) |
+| =      | Equals               | Equals                                   | Equals               | a from base b to ten | a[::b]                                                | a.startswith(b)                                              |
