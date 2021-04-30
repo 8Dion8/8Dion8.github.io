@@ -146,12 +146,16 @@
                 <td>Description</td>
             </tr>
             <tr>
-                <td>/</td>
-                <td>Cycles stack clockwise</td>
+                <td>{</td>
+                <td>Start of long inverted conditional. If top of stack equals to 0, jumps to its }</td>
             </tr>
             <tr>
-                <td>\</td>
-                <td>Cycles stack anticlockwise</td>
+                <td>}</td>
+                <td>End of long inverted conditional</td>
+            </tr>
+            <tr>
+                <td>@</td>
+                <td>Pushes whole input byte by byte. If character is an integer, then push that integer. Else push a 0</td>
             </tr>
             <tr>
                 <td>Input</td>

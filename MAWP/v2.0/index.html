@@ -31,24 +31,40 @@
                 <th>Meaning</th>
             </tr>
             <tr>
-                <td>M</td>
-                <td>Takes top two values of the stack and sums them.</td>
+                <td>0-9</td>
+                <td>Any subsequent numbers from 0 to 9 will be pushed as one multi-digit number.</td>
             </tr>
             <tr>
-                <td>A</td>
-                <td>Takes top two values of the stack and returns the absolute difference.</td>
+                <td>"</td>
+                <td>Any characters between a pair of " will get pushed to stack as a string.</td>
             </tr>
             <tr>
-                <td>W</td>
-                <td>Takes top two values of the stack and multiplies them.</td>
+                <td>+</td>
+                <td>Pops two values off of stack. If at least one of the values is a string, pushes a string consisting of two concatenated values. Else, pushes sum of values.</td>
             </tr>
             <tr>
-                <td>P</td>
-                <td>Takes top two values of the stack and floor divides the second by the other.</td>
+                <td>-</td>
+                <td>Pops two values off of stack. If one of the top two values is a string, pushes values and a 0. Else, pushes difference of values.</td>
+            </tr>
+            <tr>
+                <td>*</td>
+                <td>Pops two values off of stack. If both of two top values of stack is string, push a 0. Else, if only one of values is a string, pushes the string repeated n times, where n is the other value. Else, push two values multiplied.</td>
+            </tr>
+            <tr>
+                <td>$</td>
+                <td>Pops two values off of stack. If one of the top two values is a string, pushes values and a 0. Else, push result of second value divided by the top.</td>
             </tr>
             <tr>
                 <td>%</td>
+                <td>Pops two values off of stack. If one of the top two values is a string, pushes values and a 0. Else, pushes result of second value modulo top value.</td>
+            </tr>
+            <tr>
+                <td>`</td>
                 <td>Pops top of stack.</td>
+            </tr>
+            <tr>
+                <td>MAWP</td>
+                <td>M,A,W,P are now 4 global variables. If the previous character before one of the variables was =, then assigns top of stack to the corresponding variable. Else, pushes the variable to stack.</td>
             </tr>
             <tr>
                 <td>!</td>
@@ -60,7 +76,7 @@
             </tr>
             <tr>
                 <td>;</td>
-                <td>Prints top of stack as ascii char without newline, removing it.</td>
+                <td>If top of stack is a string, output string as sequence of ASCII codes. Else, output the corresponding ASCII character.</td>
             </tr>
             <tr>
                 <td>.</td>
@@ -150,20 +166,40 @@
         <h3 class="label">Latest added features:</h3>
         <table>
             <tr>
-                <td>Target</td>
-                <td>Description</td>
+                <td>0-9</td>
+                <td>Any subsequent numbers from 0 to 9 will be pushed as one multi-digit number.</td>
             </tr>
             <tr>
-                <td>/</td>
-                <td>Cycles stack clockwise</td>
+                <td>"</td>
+                <td>Any characters between a pair of " will get pushed to stack as a string.</td>
             </tr>
             <tr>
-                <td>\</td>
-                <td>Cycles stack anticlockwise</td>
+                <td>+</td>
+                <td>Pops two values off of stack. If at least one of the values is a string, pushes a string consisting of two concatenated values. Else, pushes sum of values.</td>
             </tr>
             <tr>
-                <td>Input</td>
-                <td>Now supports multiline input. Each stack will take in one line each call, and will push a 0 if there are no lines left</td>
+                <td>-</td>
+                <td>Pops two values off of stack. If one of the top two values is a string, pushes values and a 0. Else, pushes difference of values.</td>
+            </tr>
+            <tr>
+                <td>*</td>
+                <td>Pops two values off of stack. If both of two top values of stack is string, push a 0. Else, if only one of values is a string, pushes the string repeated n times, where n is the other value. Else, push two values multiplied.</td>
+            </tr>
+            <tr>
+                <td>$</td>
+                <td>Pops two values off of stack. If one of the top two values is a string, pushes values and a 0. Else, push result of second value divided by the top.</td>
+            </tr>
+            <tr>
+                <td>%</td>
+                <td>Pops two values off of stack. If one of the top two values is a string, pushes values and a 0. Else, pushes result of second value modulo top value.</td>
+            </tr>
+            <tr>
+                <td>`</td>
+                <td>Pops top of stack.</td>
+            </tr>
+            <tr>
+                <td>MAWP</td>
+                <td>M,A,W,P are now 4 global variables. If the previous character before one of the variables was =, then assigns top of stack to the corresponding variable. Else, pushes the variable to stack.</td>
             </tr>
         </table>
     </div>
