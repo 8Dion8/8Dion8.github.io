@@ -8,22 +8,3 @@ h6 {
     font-family: "Comfortaa", sans-serif;
     background: #130303;
 }
-
-.w3-row-padding img {
-    margin-bottom: 12px
-}
-
-.sidebar {
-    position: fixed;
-    background: #130303;
-}
-
-#main {
-    margin-left: 120px
-}
-
-@media only screen and (max-width: 600px) {
-    #main {
-        margin-left: 0
-    }
-}
