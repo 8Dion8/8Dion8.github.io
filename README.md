@@ -1,3 +1,1 @@
-This is a Github Pages enviroment for an esoteric language MAWP. For further info, please visit [https://github.com/8Dion8/MAWP](https://github.com/8Dion8/MAWP)
-
-MAWP interpreter: [https://8dion8.github.io/MAWP/](https://8dion8.github.io/MAWP/)
+This is a Github Pages for all of my web based proects. Currently the only functional one is an esoteric programming language called MAWP, which you can find under the MAWP directory or at https://8dion8.github.io/MAWP/ for the latest working version

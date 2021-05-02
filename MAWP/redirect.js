@@ -1,3 +1,2 @@
 var x = window.location.href;
-console.log(x.slice(30));
-window.location.href = window.location.href + "v2.1/";
+window.location.href = window.location.href + "v2.0/";
