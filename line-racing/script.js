@@ -84,16 +84,20 @@ var newWallY1 = -1;
 var trackCoords = [];
 var tempMouseX, tempMouseY;
 var widthInput, heightInput;
+var resizeButton;
 
 function setup() {
     cell_size = Math.min(windowWidth / gridWidth, windowHeight / (gridHeight + 1.5));
     createCanvas(gridWidth * cell_size, gridHeight * cell_size);
-    widthInput = createInput();
+    widthInput = createInput(gridWidth.toString());
     widthInput.position(0, gridHeight * cell_size);
     widthInput.size(cell_size * 4, cell_size);
-    heightInput = createInput();
+    heightInput = createInput(gridHeight.toString());
     heightInput.position(cell_size * 4, gridHeight * cell_size);
     heightInput.size(cell_size * 4, cell_size);
+    resizeButton = createButton("Resize");
+    resizeButton.position(0, (gridHeight + 1) * cell_size);
+    resizeButton.size(cell_size * 4, cell_size);
 }
 
 function draw() {

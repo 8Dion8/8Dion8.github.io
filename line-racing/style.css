@@ -4,4 +4,10 @@ div,
 canvas {
     margin: 0;
     padding: 0;
-   }
+}
+
+input,
+button {
+    background-color: #f2eecb;
+    border-color: blue;
+}
