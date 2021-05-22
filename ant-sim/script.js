@@ -1,6 +1,5 @@
-var canvas = document.getElementById("ant-display");
-// @ts-ignore
-var ctx = canvas.getContext("2d");
+/// < reference path="./p5.global-mode.d.ts" / >
+
 var gridWidth = 100;
 var gridHeight = 50;
 var cellSize = Math.min(1000 / gridWidth, 500 / gridHeight);
@@ -9,15 +8,15 @@ var ants = [];
 var walls = [];
 var foods = []; //english language left the chat
 var dirs = [
-    [0, 1], 
+    [0, 1],
     [1, 1],
     [1, 0],
-    [1, -1], 
+    [1, -1],
     [0, -1],
     [-1, -1],
     [-1, 0],
-    [-1, 1]
-]
+    [-1, 1],
+];
 
 for (let i = 0; i < 5; i++) {
     for (let j = 0; j < 5; j++) {
@@ -39,9 +38,8 @@ for (let i = 0; i < 40; i++) {
     walls.push(new Wall(30, i));
 }
 
-
 function atXY(x, y) {
-    ctx.fillRect(x * cellSize, y * cellSize, cellSize, cellSize);
+    rect(x * cellSize, y * cellSize, cellSize, cellSize);
     if (x == -1 || y == -1 || x == gridWidth || y == gridHeight) {
         return null;
     }
@@ -64,16 +62,12 @@ function atXY(x, y) {
 }
 
 function drawGrid() {
-    ctx.fillStyle = "#000000";
+    stroke("#000000");
     for (let i = 1; i < gridWidth; i++) {
-        ctx.moveTo(i * cellSize + 1, 0);
-        ctx.lineTo(i * cellSize + 1, gridHeight * cellSize);
-        ctx.stroke();
+        line(i * cellSize + 1, 0, i * cellSize + 1, gridHeight * cellSize);
     }
     for (let i = 1; i < gridHeight; i++) {
-        ctx.moveTo(0, i * cellSize + 1);
-        ctx.lineTo(gridWidth * cellSize, i * cellSize);
-        ctx.stroke();
+        line(0, i * cellSize + 1, gridWidth * cellSize, i * cellSize);
     }
 }
 
@@ -84,7 +78,7 @@ function Ant(x, y) {
     this.direction = dirs[Math.floor(Math.random() * dirs.length)];
 
     this.inView = function () {
-        ctx.fillStyle = "#008800";
+        fill("#008800");
         switch (this.direction.toString()) {
             case "0,1":
                 return [
@@ -126,20 +120,20 @@ function Ant(x, y) {
                 return [
                     atXY(this.x - 1, this.y - 1),
                     atXY(this.x - 1, this.y),
-                    atXY(this.x - 1, this.y + 1)
+                    atXY(this.x - 1, this.y + 1),
                 ];
-            case "-1,1": 
+            case "-1,1":
                 return [
                     atXY(this.x - 1, this.y),
                     atXY(this.x - 1, this.y + 1),
-                    atXY(this.x, this.y + 1)
+                    atXY(this.x, this.y + 1),
                 ];
         }
     };
 
     this.draw = function () {
-        ctx.fillStyle = "#FF0000";
-        ctx.fillRect(this.x * cellSize, this.y * cellSize, cellSize, cellSize);
+        fill("#FF0000");
+        rect(this.x * cellSize, this.y * cellSize, cellSize, cellSize);
     };
 }
 
@@ -149,8 +143,8 @@ function Food(x, y) {
     this.val = 3;
 
     this.draw = function () {
-        ctx.fillStyle = "#00FF00";
-        ctx.fillRect(this.x * cellSize, this.y * cellSize, cellSize, cellSize);
+        fill("#00FF00");
+        rect(this.x * cellSize, this.y * cellSize, cellSize, cellSize);
     };
 }
 
@@ -160,9 +154,14 @@ function Wall(x, y) {
     this.val = 1;
 
     this.draw = function () {
-        ctx.fillStyle = "#888888";
-        ctx.fillRect(this.x * cellSize, this.y * cellSize, cellSize, cellSize);
+        fill("#888888");
+        rect(this.x * cellSize, this.y * cellSize, cellSize, cellSize);
     };
+}
+
+function setup() {
+    createCanvas(gridWidth * cellSize, gridHeight * cellSize);
+    frameRate(2);
 }
 
 //ants.push(new Ant(6,5));
@@ -170,17 +169,18 @@ function Wall(x, y) {
 
 //console.log(ants);
 
-//while (mainloop) {
-
-for (let ant of ants) {
-    ant.draw();
-    var inview = ant.inView();
+function draw() {
+    background([255, 255, 255]);
+    for (let ant of ants) {
+        ant.draw();
+        var inview = ant.inView();
+        //ant.direction = dirs[Math.floor(Math.random() * dirs.length)];
+    }
+    for (let food of foods) {
+        food.draw();
+    }
+    for (let wall of walls) {
+        wall.draw();
+    }
+    drawGrid();
 }
-for (let food of foods) {
-    food.draw();
-}
-for (let wall of walls) {
-    wall.draw();
-}
-drawGrid();
-//}
