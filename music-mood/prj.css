@@ -11,7 +11,7 @@ h1 {
     background-color:#2e3440;
     margin-left:275px;
     font-weight:bold;
-    font-size:40px;
+    font-size:200%;
     outline:5px double;
     margin-right:175px;
     display:block;
@@ -26,7 +26,8 @@ h3 {
     font-style:italic;
 }
 
-.option {
+
+option {
     text-align:center;
     color:#d8dee9;
     background-color: #2e3440;
@@ -35,6 +36,10 @@ h3 {
     text-decoration: underline;
     border:6px outset;
 }
+
+option:hover {
+    color:red;
+    }
 
 .btn {
     margin-top:10px;
@@ -62,4 +67,28 @@ h3 {
     font-size:20px;
     font-family:"Courier";
     font-style:italic;
+    
+}
+
+p {
+    -webkit-animation: fadein2 2s;
+    -moz-animation: fadein2 2s;
+    -ms-animation: fadein2 2s;
+    -o-animation: fadein2 2s;
+    animation: fadein2 2s;
+}
+
+@keyframes fadein {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+#center {
+    margin: 0;
+    position: absolute;
+    background-position: bottom;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
 }
