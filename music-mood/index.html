@@ -12,27 +12,25 @@
         <h1 class="large-title">Learn how your music affects your everyday life and mood!</h1>
         <h3 class="medium-title">Choose the genres you listen to below:</h3>
 
-        <!-- 
-        Soothing music like Jazz helps us distress and has healing powers.
-        Upbeat music releases endorphins and which makes us happy and increases our immune.
-        Pop music boosts energy and helps us exercise better.
-        Rhythmic drumming helps in meditation.
-        Classical music helps in memory recall and also deters crime.
-        Metal is good for our sense of self and gives a strong sense of identity.
-        Rap music can help fight against depression. 
-        -->
-        <select class="dropdown" id="genres" multiple="multiple">
-            <option class="option" value="jazz">Jazz</option>
+        <select class="dropdown" id="genres" multiple="multiple" size="6">
+            <option value="jazz">Jazz</option>
             <option value="pop">Pop</option>
-            <option value="rhythmic">Rhythmic beats</option>
             <option value="classical">Classical</option>
             <option value="heavy">Heavy Metal/Trap</option>
             <option value="rap">Rap</option>
             <option value="rock">Rock</option>
         </select><br>
         <button class="btn" id="geteffects" onclick="get_effects();">Get Effects</button>
+        <h3 class="medium-title">If you would like to change your everyday mood or other aspects, try choosing the effects you would like to get specialised music playlists:</h3>
+        <select class="dropdown" id="moods" multiple="multiple" size="6">
+            <option value="relaxation">Relaxation and removal of stress</option>
+            <option value="sadness">Help with depression and sadness</option>
+            <option value="happiness">Happiness and uplift</option>
+            <option value="confidence">Gaining self-confidence</option>
+            <option value="development">Self-development and improvement</option>
+            <option value="energy">Energy and excersize</option>
+        </select><br>
+        <button class="btn" id="getmoods" onclick="get_moods();">Get Moods</button>
         <p class="outp" id="out">Your results will appear here</p>
-
-        <h3 class="medium-title">If you would like to change your everyday mood, try choosing the moods you would like:</h3>
     </body>
 </html>
