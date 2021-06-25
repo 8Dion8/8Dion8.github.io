@@ -16,13 +16,17 @@ var moods_data = {
     "energy": ["pop", "heavy"]
 }
 
+var windowWidth = $(window).width();
+var playlistWidth = windowWidth / 3.05;
+
+
 var playlist_data = {
-    "jazz":      '<iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DXbITWG1ZJKYt" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>',
-    "pop":       '<iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1EQncLwOalG3K7" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>',
-    "classical": '<iframe src="https://open.spotify.com/embed/playlist/4QmEU6NadjuCqD6u70x2nR" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>',
-    "heavy":     '<iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DX3OnbIGFmkJA" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>',
-    "rap":       '<iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DX76t638V6CA8" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>',
-    "rock":      '<iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DWXRqgorJj26U" width="300" height="380" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>'
+    "jazz":      '<iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DXbITWG1ZJKYt" width="'+playlistWidth+'" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>',
+    "pop":       '<iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1EQncLwOalG3K7" width="'+playlistWidth+'" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>',
+    "classical": '<iframe src="https://open.spotify.com/embed/playlist/4QmEU6NadjuCqD6u70x2nR" width="'+playlistWidth+'" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>',
+    "heavy":     '<iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DX3OnbIGFmkJA" width="'+playlistWidth+'" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>',
+    "rap":       '<iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DX76t638V6CA8" width="'+playlistWidth+'" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>',
+    "rock":      '<iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DWXRqgorJj26U" width="'+playlistWidth+'" height="380" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>'
 }
 
 function get_effects() {
