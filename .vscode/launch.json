@@ -1,19 +1,39 @@
 {
-    "version": "0.2.0",
-    "configurations": [
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Python: Current File",
+      "type": "python",
+      "request": "launch",
+      "program": "${file}",
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "2.1 transpile debug",
+      "type": "firefox",
+      "request": "launch",
+      "reAttach": true,
+      "file": "${workspaceFolder}/MAWP/v2.1/index.html"
+    },
+    {
+      "name": "Just check the website",
+      "type": "firefox",
+      "request": "launch",
+      "reAttach": true,
+      "file": "${workspaceFolder}/index.html"
+    },
+    {
+      "name": "Ants",
+      "type": "firefox",
+      "request": "launch",
+      "reAttach": true,
+      "file": "${workspaceFolder}/ant-sim/index.html",
+      "pathMappings": [
         {
-            "name": "2.1 transpile debug",
-            "type": "firefox",
-            "request": "launch",
-            "reAttach": true,
-            "file": "${workspaceFolder}/MAWP/v2.1/index.html"
-        },
-        {
-            "name": "Just check the website",
-            "type": "firefox",
-            "request": "launch",
-            "reAttach": true,
-            "file": "${workspaceFolder}/index.html"
+          "url": "file://",
+          "path": ""
         }
-    ]
+      ]
+    }
+  ]
 }

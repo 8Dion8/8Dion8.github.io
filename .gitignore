@@ -7,3 +7,4 @@ line-racing/p5.global-mode.d.ts
 ant-sim/script.js
 ant-sim/p5.global-mode.d.ts
 .gitignore
+ant-sim/p5.d.ts
