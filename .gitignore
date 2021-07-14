@@ -2,3 +2,9 @@ line-racing/style.css
 line-racing/.prettierrc
 line-racing/p5.d.ts
 line-racing/p5.global-mode.d.ts
+.prettierrc
+.vscode/launch.json
+ant-sim/script.js
+ant-sim/p5.global-mode.d.ts
+.gitignore
+ant-sim/p5.d.ts
