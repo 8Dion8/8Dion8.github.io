@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!--<script src="https://cdn.jsdelivr.net/npm/p5@1.1.9/lib/p5.js"></script>-->
+    
+    <title>Create your own island!</title>
+</head>
+    <body>
+        <canvas id="mainCanvas" width="500" height="500"></canvas><br>
+        <input type="text" id="seed" value="Your Seed" oninput="update_everything()">
+        <input type="number" id="threshold" value="70" oninput="update_everything()"><br>
+        <button onclick="generate_noise()">Generate Noise</button>
+        <button onclick="make_noise_bw()">Make Noise BW</button>
+    </body>
+    <!--<script src="https://api.ipify.org?format=jsonp&callback=getIP"></script>-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="perlin.js"></script>
+    <script src="script.js"></script>
+</html>
