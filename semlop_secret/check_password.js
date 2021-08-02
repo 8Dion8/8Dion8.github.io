@@ -5,9 +5,7 @@ function hash(str) {
 
 function checkPassword() {
     var inputted = document.getElementById("secret").value + '';
-    var test_hash = hash("31.01.21");
-    console.log(test_hash, hash(inputted), inputted);
-    if (hash(inputted) == test_hash) {
+    if (hash(inputted) == 589796796 || hash(inputted) == -140961478) {
         document.open();
         document.write(
             `
