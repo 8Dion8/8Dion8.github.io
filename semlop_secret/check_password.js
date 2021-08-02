@@ -6,6 +6,7 @@ function hash(str) {
 function checkPassword() {
     var inputted = document.getElementById("secret").value + '';
     if (hash(inputted) == 589796796 || hash(inputted) == -140961478) {
+        //document.getElementById("audiotag").play();
         document.open();
         document.write(
             `
@@ -22,6 +23,7 @@ function checkPassword() {
             </head>
 
             <body>
+                <audio id="audiotag" src="happybirthday.mp3" preload="auto"></audio>
                 <div id="main_cont">
                     <h2>У тебя получилось :)</h2>
                     <h3>(нифига ты умный)</h3>
@@ -44,6 +46,7 @@ function checkPassword() {
             `
         );
         document.close();
+        document.getElementById("audiotag").play();
     } else {
         document.open();
         document.write(
