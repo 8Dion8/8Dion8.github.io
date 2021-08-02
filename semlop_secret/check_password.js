@@ -23,7 +23,7 @@ function checkPassword() {
             </head>
 
             <body>
-                <audio id="audiotag" src="happybirthday.mp3" preload="auto"></audio>
+                <audio id="audiotag" src="happybirthday.mp3" preload="true"></audio>
                 <div id="main_cont">
                     <h2>У тебя получилось :)</h2>
                     <h3>(нифига ты умный)</h3>
