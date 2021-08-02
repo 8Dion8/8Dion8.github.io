@@ -67,7 +67,7 @@ function checkPassword() {
                 <h1>У тя не получилось( как так то(</h1>
                 <div class="container">
                     <div class="center">
-                        <a href="./semlop_secret/">Тыкни сюда чтобы перезагрузить</a>
+                        <a href="./">Тыкни сюда чтобы перезагрузить</a>
                     </div>
                 </div>
             </body>
