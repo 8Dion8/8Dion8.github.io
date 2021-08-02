@@ -1,0 +1,110 @@
+body, html {
+    height: 100%;
+    background-color: rgb(24, 25, 26);
+    
+}
+
+h1, h2, h3 {
+    text-align: center;
+    font-family: 'Comfortaa';
+    color: white;
+}
+
+.container {
+    height: 50px;
+    position: relative;
+}
+
+.center {
+    margin: 0;
+    position: absolute;
+    background-position: bottom;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+p, a {
+    text-align: center;
+    font-family: 'Comfortaa';
+    color: white;
+}
+
+img, p, h3, a, input, button {
+    -webkit-animation: fadein4 2s;
+    -moz-animation: fadein4 2s;
+    -ms-animation: fadein4 2s;
+    -o-animation: fadein4 2s;
+    animation: fadein4 2s;
+}
+
+#main_cont {
+    width: 100%;
+    height: 30%;
+}
+
+#img_cont {
+    width: 100%;
+    height: 70%
+}
+
+h2 {
+    -webkit-animation: fadein2 2s;
+    -moz-animation: fadein2 2s;
+    -ms-animation: fadein2 2s;
+    -o-animation: fadein2 2s;
+    animation: fadein2 2s;
+}
+
+h1 {
+    -webkit-animation: fadein3 2s;
+    -moz-animation: fadein3 2s;
+    -ms-animation: fadein3 2s;
+    -o-animation: fadein3 2s;
+    animation: fadein3 2s;
+}
+
+@keyframes fadein4 {
+    0% {opacity: 0;}
+    60% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+@keyframes fadein3 {
+    0% {opacity: 0;}
+    40% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+@keyframes fadein2 {
+    0% {opacity: 0;}
+    20% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+@keyframes fadein {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+button {
+    border: none;
+    color: white;
+    padding: 16px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    /*margin: 4px 5px;*/
+    transition-duration: 0.4s;
+    cursor: pointer;
+    background-color: rgb(44, 45, 46);
+    border: 2px solid white;
+}
+
+button:hover {
+    background-color: white;
+    color: rgb(44, 45, 46);
+    border: 2px solid rgb(44, 45, 46);
+}
