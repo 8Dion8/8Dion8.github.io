@@ -10,7 +10,11 @@
 
 <body>
     <canvas id="firstCanvas" width="500" height="500"></canvas>
-    <button id="firstButton" onclick="firstCanvas();">Generate!</button>
+    <button id="firstButton" onclick="setSeed();firstCanvas();">Generate!</button><br>
+
+    <canvas id="secondCanvas0" width="500" height="500"></canvas>
+    <canvas id="secondCanvas1" width="500" height="500"></canvas>
+    <button id="secondButton" onclick="setSeed();secondCanvas();">Generate!</button><br>
 </body>
 <script src="perlin.js"></script>
 <script src="script.js"></script>
