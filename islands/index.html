@@ -10,14 +10,19 @@
     <title>Create your own island!</title>
 </head>
     <body>
-        <canvas id="mainCanvas" width="500" height="500"></canvas><br>
-        <input type="text" id="seed" value="Your Seed" oninput="update_everything()">
-        <input type="number" id="threshold" value="70" oninput="update_everything()"><br>
+        <canvas id="mainCanvas" width="840" height="840"></canvas><br>
+        <p>Canvas Resolution:</p>
+        <input type="number" id="canvasResolution" value="120" oninput="update_everything()"><br>
+        <p>Seed:</p>
+        <input type="text" id="seed" value="Your Seed" oninput="update_everything()"><br>
+        <input type="number" id="oceanThreshold" value="70" oninput="update_everything()"><br>
+        <input type="number" id="beachThreshold" value="80" oninput="update_everything()">
+        <input type="number" id="grassThreshold" value="150" oninput="update_everything()">
         <button onclick="generate_noise()">Generate Noise</button>
-        <button onclick="make_noise_bw()">Make Noise BW</button>
+        <button onclick="threshold_noise()">Colour!</button>
     </body>
     <!--<script src="https://api.ipify.org?format=jsonp&callback=getIP"></script>-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>-->
     <script src="perlin.js"></script>
     <script src="script.js"></script>
 </html>
