@@ -1,0 +1,140 @@
+body, html {
+    height: 100%;
+    background-color: #0B3954;
+    
+}
+
+h1, h2, h3, h4 {
+    text-align: center;
+    font-family: 'Comfortaa';
+    color: #FFFFEA;
+}
+
+.container {
+    height: 500px;
+    position: relative;
+}
+
+.center {
+    margin: 0;
+    position: absolute;
+    background-position: bottom;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+p, h1 {
+    -webkit-animation: fadein 2s;
+    -moz-animation: fadein 2s;
+    -ms-animation: fadein 2s;
+    -o-animation: fadein 2s;
+    animation: fadein 2s;
+}
+
+img {
+    -webkit-animation: imgappearance 1s;
+    -moz-animation: imgappearance 1s;
+    -ms-animation: imgappearance 1s;
+    -o-animation: imgappearance 1s;
+    animation: imgappearance 1s;
+}
+
+h2 {
+    -webkit-animation: fadein2 2s;
+    -moz-animation: fadein2 2s;
+    -ms-animation: fadein2 2s;
+    -o-animation: fadein2 2s;
+    animation: fadein2 2s;
+}
+
+h3 {
+    color: #FF5A5F;
+    -webkit-animation: fadein3 2s;
+    -moz-animation: fadein3 2s;
+    -ms-animation: fadein3 2s;
+    -o-animation: fadein3 2s;
+    animation: fadein3 2s;
+}
+
+h4 {
+    -webkit-animation: fadein4 2s;
+    -moz-animation: fadein4 2s;
+    -ms-animation: fadein4 2s;
+    -o-animation: fadein4 2s;
+    animation: fadein4 2s;
+}
+
+#final {
+    color: #FF5A5F;
+    -webkit-animation: finalanim 4s;
+    -moz-animation: finalanim 4s;
+    -ms-animation: finalanim 4s;
+    -o-animation: finalanim 4s;
+    animation: finalanim 4s;
+}
+
+@keyframes finalanim {
+    0% {opacity: 0;}
+    90% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+@keyframes fadein4 {
+    0% {opacity: 0;}
+    60% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+@keyframes fadein3 {
+    0% {opacity: 0;}
+    40% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+@keyframes fadein2 {
+    0% {opacity: 0;}
+    20% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+@keyframes fadein {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+@keyframes imgappearance {
+    0% {
+        opacity: 0;
+        transform: scale(2.0);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1.0);
+    }
+}
+
+button {
+    border: none;
+    color: #FFFFEA;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    background-color: rgb(44, 45, 46);
+    border: 2px solid #FFFFEA;
+    font-family: "Comfortaa";
+
+    -webkit-animation: fadein4 2s;
+    -moz-animation: fadein4 2s;
+    -ms-animation: fadein4 2s;
+    -o-animation: fadein4 2s;
+    animation: fadein4 2s;
+}
+
+button:hover {background-color: #FFFFEA;color: black;}
