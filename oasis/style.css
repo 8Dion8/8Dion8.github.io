@@ -64,6 +64,7 @@ body {
     font-family: "SeldomScene";
     font-size: 8vw;
     color: white;
+    animation-delay: 0.2s;
     text-shadow:0 0 20px #ffffff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6,
         0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
     margin-top: 35vh;
@@ -239,7 +240,5 @@ body {
     }
     100% {
         opacity: 0;
-        height: 0vh;
-        width: 0vw;
     }
 }
