@@ -1,0 +1,101 @@
+body, html {
+    height: 100%;
+    background-color: #282a36;
+    
+}
+
+h1, h2, h3 {
+    text-align: center;
+    font-family: 'Comfortaa', cursive;
+    color: white;
+    -webkit-animation: fadein2 2s;
+    -moz-animation: fadein2 2s;
+    -ms-animation: fadein2 2s;
+    -o-animation: fadein2 2s;
+    animation: fadein2 2s;
+}
+
+.container {
+    height: 500px;
+    position: relative;
+}
+
+.center {
+    margin: 0;
+    position: absolute;
+    background-position: bottom;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+img, p {
+    -webkit-animation: fadein 2s;
+    -moz-animation: fadein 2s;
+    -ms-animation: fadein 2s;
+    -o-animation: fadein 2s;
+    animation: fadein 2s;
+}
+
+.fadeout {
+    -webkit-animation: fadeout 1s;
+    -moz-animation: fadeout 1s;
+    -ms-animation: fadeout 1s;
+    -o-animation: fadeout 1s;
+    animation: fadeout 1s;
+}
+
+h2 {
+    -webkit-animation: fadein2 2s;
+    -moz-animation: fadein2 2s;
+    -ms-animation: fadein2 2s;
+    -o-animation: fadein2 2s;
+    animation: fadein2 2s;
+}
+
+
+@keyframes fadein2 {
+    0% {opacity: 0;}
+    20% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+@keyframes fadein {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+@keyframes fadeout2 {
+    0% {opacity: 1;}
+    20% {opacity: 1;}
+    100% {opacity: 0;}
+}
+
+@keyframes fadeout {
+    0% {opacity: 1;}
+    100% {opacity: 0;}
+}
+
+button {
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    background-color: #282a36;
+    border: 2px solid white;
+    width: 533px;
+    -webkit-animation: fadein2 2s;
+    -moz-animation: fadein2 2s;
+    -ms-animation: fadein2 2s;
+    -o-animation: fadein2 2s;
+    animation: fadein2 2s;
+}
+
+button:hover {background-color: #6272a4;}
